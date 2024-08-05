@@ -5,9 +5,13 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import {  slideIn } from "../utils/motion";
+import AlertCorrect from "./AlertCorrect";
+import AlertWrong from "./AlertWrong";
 
 const Contact = () => {
   const formRef = useRef();
+  const [correctAlert , setCorrectAlert] = useState(false)
+  const [wrongAlert , setWrongAlert] = useState(false)
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -23,6 +27,11 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    // setTimeout(() => {
+    //   setLoading(false);
+    //   setCorrectAlert(true)
+    //   setWrongAlert(true)
+    // }, 3000);
 
     emailjs
       .send(
@@ -37,17 +46,22 @@ const Contact = () => {
         },
         'SKyo4AsXtg4jRsAcE'
       ).then(() => {
+        setCorrectAlert(true)
+        setTimeout(() => {
+          setCorrectAlert(false)
+        }, 2000);
         setLoading(false);
-        alert("Thank you. I will get back to you as soon as possible.");
         setForm({
           name: "",
           email: "",
           message: "",
         })
       }, (error) => {
+        setWrongAlert(true)
+        setTimeout(() => {
+          setWrongAlert(false)
+        },2000)
         setLoading(false);
-        console.log(error)
-        alert("Something went wrong")
       })
 
   };
@@ -71,6 +85,7 @@ const Contact = () => {
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
               type="text"
+              required
               name="name"
               value={form.name}
               onChange={handleChange}
@@ -81,6 +96,7 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
             <input
+              required
               type="email"
               name="email"
               value={form.email}
@@ -92,6 +108,7 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
+              required
               rows="7"
               name="message"
               value={form.message}
@@ -107,6 +124,12 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
+        { correctAlert && <motion.div variants={slideIn("bottom", "tween", 0.2, 1)} className="mt-10" >
+          <AlertCorrect />
+        </motion.div>}
+        { wrongAlert && <motion.div variants={slideIn("bottom", "tween", 0.2, 1)} className="mt-10" >
+          <AlertWrong />
+        </motion.div>}
       </motion.div>
 
       <motion.div
