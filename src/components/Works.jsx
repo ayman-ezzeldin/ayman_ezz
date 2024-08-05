@@ -1,6 +1,5 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
-// import { Tilt } from '/node_modules/.vite/deps/react-tilt.js';
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { demo, github } from "../assets";
