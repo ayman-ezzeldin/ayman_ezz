@@ -71,17 +71,17 @@ const technologies = [
   //   name: "Next JS",
   //   icon: nextJs,
   // },
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Three JS",
+    icon: threejs,
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
   },
   {
     name: "git",
