@@ -24,7 +24,8 @@ import {
   tripguide,
   threejs,
   zageng ,
-  nextJs
+  nextJs,
+  portfolio
 } from "../assets";
 
 export const navLinks = [
@@ -122,7 +123,6 @@ const experiences = [
     date: "October 2023 - Now",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
-      // "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
@@ -131,7 +131,7 @@ const experiences = [
     title: "Next js",
     company_name: "GDSC ZAG",
     icon: nextJs,
-    iconBg: "#E6DEDD",
+    iconBg: "white",
     date: "October 2023 - Now",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -140,32 +140,6 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
-  // {
-  //   title: "Web Developer",
-  //   company_name: "Shopify",
-  //   icon: shopify,
-  //   iconBg: "#383E56",
-  //   date: "Jan 2022 - Jan 2023",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
 ];
 
 const testimonials = [
@@ -212,29 +186,29 @@ const projects = [
     ],
     image: zageng,
     source_code_link: "https://github.com/Ayman-ezzeldin/ZagEng-Familyb",
-    source_demo_link: "https://zag-eng-family.vercel.app/",
+    source_demo_link: "https://zag-eng-family.vercel.app",
   },
   {
-    name: "Job IT",
+    name: "My portfolio",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web application that enables users to see my experience, view Projects  and can contact me.",
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
+        name: "Next JS",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "three js",
         color: "pink-text-gradient",
       },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/Ayman-ezzeldin",
-    source_demo_link: "https://github.com/Ayman-ezzeldin",
+    image: portfolio,
+    source_code_link: "https://github.com/Ayman-ezzeldin/ayman_ezz",
+    source_demo_link: "https://ayman-ezz.vercel.app",
   },
   {
     name: "Trip Guide",
