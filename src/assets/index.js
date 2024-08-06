@@ -31,6 +31,7 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import demo from "./demo.svg";
 import zageng from "./zageng.png";
+import nextJs from './tech/nextJs.jpeg'
 
 export {
   logo,
@@ -63,4 +64,5 @@ export {
   tripguide,
   demo,
   zageng,
+  nextJs,
 };

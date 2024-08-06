@@ -24,6 +24,7 @@ import {
   tripguide,
   threejs,
   zageng ,
+  nextJs
 } from "../assets";
 
 export const navLinks = [
@@ -78,6 +79,10 @@ const technologies = [
     icon: reactjs,
   },
   {
+    name: "Next JS",
+    icon: nextJs,
+  },
+  {
     name: "Redux Toolkit",
     icon: redux,
   },
@@ -93,10 +98,6 @@ const technologies = [
     name: "git",
     icon: git,
   },
-  // {
-  //   name: "Next JS",
-  //   icon: figma,
-  // },
   {
     name: "figma",
     icon: figma,
@@ -128,7 +129,7 @@ const experiences = [
   {
     title: "Next js",
     company_name: "GDSC ZAG",
-    icon: creator,
+    icon: nextJs,
     iconBg: "#E6DEDD",
     date: "October 2023 - Now",
     points: [
