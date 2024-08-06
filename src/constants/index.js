@@ -120,7 +120,7 @@ const experiences = [
     title: "React.js Developer",
     company_name: "GDSC ZAG",
     icon: reactjs,
-    iconBg: "#383E56",
+    iconBg: "#fff",
     date: "October 2023 - Now",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -132,7 +132,7 @@ const experiences = [
     title: "Next js",
     company_name: "GDSC ZAG",
     icon: nextJs,
-    iconBg: "white",
+    iconBg: "#fff",
     date: "October 2023 - Now",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
