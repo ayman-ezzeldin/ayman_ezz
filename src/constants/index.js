@@ -25,7 +25,8 @@ import {
   threejs,
   zageng ,
   nextJs,
-  portfolio
+  portfolio,
+  eLearning,
 } from "../assets";
 
 export const navLinks = [
@@ -183,9 +184,13 @@ const projects = [
         name: "tailwind",
         color: "blue-text-gradient",
       },
+      {
+        name: "Excel",
+        color: "pink-text-gradient",
+      },
     ],
     image: zageng,
-    source_code_link: "https://github.com/Ayman-ezzeldin/ZagEng-Familyb",
+    source_code_link: "https://github.com/Ayman-ezzeldin/ZagEng-Family",
     source_demo_link: "https://zag-eng-family.vercel.app",
   },
   {
@@ -211,26 +216,30 @@ const projects = [
     source_demo_link: "https://ayman-ezz.vercel.app",
   },
   {
-    name: "Trip Guide",
+    name: "E-Learning",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A comprehensive Education booking platform that allows users to book courses in various subjects, including front-end, back-end, data science and offers curated recommendations for popular courses.",
     tags: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
+        name: "React JS",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Tailwind ",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "bootstrap ",
         color: "pink-text-gradient",
       },
+      {
+        name: "db.json",
+        color: "text-red-600",
+      },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/Ayman-ezzeldin",
-    source_demo_link: "https://github.com/Ayman-ezzeldin",
+    image: eLearning,
+    source_code_link: "https://github.com/ayman-ezzeldin/E-Learning-App",
+    source_demo_link: "https://e-learning-app-six.vercel.app/",
   },
 ];
 
