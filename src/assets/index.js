@@ -36,6 +36,8 @@ import portfolio from './portfolio.png'
 import eLearning from './eLearning.png'
 import gdsc from './gdsc.png'
 import animation from './animation.png'
+import foodies from './foodies.png'
+
 export {
   logo,
   backend,
@@ -72,4 +74,5 @@ export {
   eLearning,
   gdsc,
   animation,
+  foodies,
 };

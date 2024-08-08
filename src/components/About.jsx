@@ -11,7 +11,7 @@ const ServiceCard = ({ index, title, icon }) => {
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card mx-auto "
       >
       <div
       options = {{ max:45, scale: 1, speed: 450 }}
@@ -41,7 +41,7 @@ const About = () => {
         student of CSE at Google DSC Zag. I'm passionate about web development
         and I'm always looking for new projects to work on.
       </motion.p>
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

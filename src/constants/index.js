@@ -1,15 +1,15 @@
 import {
-  mobile,
-  backend,
   creator,
   web,
   javascript,
+  reactjs,
   typescript,
+  tailwind,
+  mobile,
+  backend,
   html,
   css,
-  reactjs,
   redux,
-  tailwind,
   nodejs,
   mongodb,
   git,
@@ -29,6 +29,7 @@ import {
   eLearning,
   gdsc,
   animation,
+  foodies,
 } from "../assets";
 
 export const navLinks = [
@@ -179,7 +180,7 @@ const projects = [
   {
     name: "Animation",
     description:
-      "Web application that enables users to see my experience, view Projects  and can contact me.",
+      "Web application that enables you to try different animations like scroll, modal view and more.",
     tags: [
       {
         name: "React JS",
@@ -245,6 +246,28 @@ const projects = [
     image: portfolio,
     source_code_link: "https://github.com/Ayman-ezzeldin/ayman_ezz",
     source_demo_link: "https://ayman-ezz.vercel.app",
+  },
+  {
+    name: "Foodies",
+    description:
+      "Web application that enables users to see meals, view varient of food  and can share you own meal.",
+    tags: [
+      {
+        name: "Next JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Database",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: foodies,
+    source_code_link: "https://github.com/Ayman-ezzeldin/foodies",
+    source_demo_link: "https://foodies-kappa.vercel.app",
   },
 ];
 
