@@ -34,7 +34,7 @@ import tripguide from "./tripguide.png";
 import zageng from "./zageng.png";
 import portfolio from './portfolio.png'
 import eLearning from './eLearning.png'
-
+import gdsc from './gdsc.png'
 export {
   logo,
   backend,
@@ -69,4 +69,5 @@ export {
   nextJs,
   portfolio,
   eLearning,
+  gdsc,
 };

@@ -27,6 +27,7 @@ import {
   nextJs,
   portfolio,
   eLearning,
+  gdsc,
 } from "../assets";
 
 export const navLinks = [
@@ -81,38 +82,6 @@ const technologies = [
     name: "Next JS",
     icon: nextJs,
   },
-  // {
-  //   name: "Redux Toolkit",
-  //   icon: redux,
-  // },
-  // {
-  //   name: "Three JS",
-  //   icon: threejs,
-  // },
-  // {
-  //   name: "git",
-  //   icon: git,
-  // },
-  // {
-  //   name: "figma",
-  //   icon: figma,
-  // },
-  // {
-  //   name: "HTML 5",
-  //   icon: html,
-  // },
-  // {
-  //   name: "CSS 3",
-  //   icon: css,
-  // },
-  // {
-  //   name: "MongoDB",
-  //   icon: mongodb,
-  // },
-  // {
-  //   name: "docker",
-  //   icon: docker,
-  // },
 ];
 
 const experiences = [
@@ -129,13 +98,26 @@ const experiences = [
     ],
   },
   {
-    title: "Next js",
+    title: "GDSC ZAG",
+    company_name: "Lead of frontend team",
+    icon: gdsc,
+    iconBg: "#fff",
+    date: "October 2023 - Now",
+    points: [
+      "Developing and maintaining my soft skills.",
+      "Lead our core-team , members and providing leadership and guidance to our team members.",
+      "Collaborating with my teams including designers and other developers to create high-quality products.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "Next.js Developer",
     company_name: "GDSC ZAG",
     icon: nextJs,
     iconBg: "#fff",
     date: "October 2023 - Now",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Developing and maintaining web applications using Next.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
