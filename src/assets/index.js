@@ -35,6 +35,7 @@ import zageng from "./zageng.png";
 import portfolio from './portfolio.png'
 import eLearning from './eLearning.png'
 import gdsc from './gdsc.png'
+import animation from './animation.png'
 export {
   logo,
   backend,
@@ -70,4 +71,5 @@ export {
   portfolio,
   eLearning,
   gdsc,
+  animation,
 };

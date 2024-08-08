@@ -28,6 +28,7 @@ import {
   portfolio,
   eLearning,
   gdsc,
+  animation,
 } from "../assets";
 
 export const navLinks = [
@@ -176,16 +177,16 @@ const projects = [
     source_demo_link: "https://zag-eng-family.vercel.app",
   },
   {
-    name: "My portfolio",
+    name: "Animation",
     description:
       "Web application that enables users to see my experience, view Projects  and can contact me.",
     tags: [
       {
-        name: "Next JS",
+        name: "React JS",
         color: "green-text-gradient",
       },
       {
-        name: "three js",
+        name: "Motion UI",
         color: "pink-text-gradient",
       },
       {
@@ -193,14 +194,14 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: portfolio,
-    source_code_link: "https://github.com/Ayman-ezzeldin/ayman_ezz",
-    source_demo_link: "https://ayman-ezz.vercel.app",
+    image: animation,
+    source_code_link: "https://github.com/Ayman-ezzeldin/Animation",
+    source_demo_link: "https://animation-scroll-puce.vercel.app/",
   },
   {
     name: "E-Learning",
     description:
-      "A comprehensive Education booking platform that allows users to book courses in various subjects, including front-end, back-end, data science and offers curated recommendations for popular courses.",
+    "A comprehensive Education booking platform that allows users to book courses in various subjects, including front-end, back-end, data science and offers curated recommendations for popular courses.",
     tags: [
       {
         name: "React JS",
@@ -222,6 +223,28 @@ const projects = [
     image: eLearning,
     source_code_link: "https://github.com/ayman-ezzeldin/E-Learning-App",
     source_demo_link: "https://e-learning-app-six.vercel.app/",
+  },
+  {
+    name: "My portfolio",
+    description:
+      "Web application that enables users to see my experience, view Projects  and can contact me.",
+    tags: [
+      {
+        name: "Next JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "three js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/Ayman-ezzeldin/ayman_ezz",
+    source_demo_link: "https://ayman-ezz.vercel.app",
   },
 ];
 
