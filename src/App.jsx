@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
-import 
-  {About,
+import {
+  About,
   Contact,
   Experience,
   Feedbacks,
@@ -8,8 +8,9 @@ import
   Navbar,
   Tech,
   Works,
-  StarsCanvas,}
-from "./components";
+  StarsCanvas,
+} from "./components";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center mb-24 ">
           <Navbar />
           <Hero />
-        </div >
+        </div>
         <About />
         <Experience />
         <Tech />
@@ -28,6 +29,7 @@ function App() {
           <Contact />
           <StarsCanvas />
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );
