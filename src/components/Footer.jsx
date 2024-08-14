@@ -9,8 +9,8 @@ const Footer = () => {
     <footer className=" max-w-7xl mx-auto">
       <div className="mx-auto max-w-5xl bg-transparent px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center items-center gap-3 text-teal-600">
-          <img src={logo} alt="logo" className="w-16 h-17 object-contain" />
-          <h2 className="text-3xl font-bold">Ayman M Ezzeldin</h2>
+          <img src={logo} alt="logo" className="w-16 h-16 object-contain" />
+          <h2 className="text-2xl font-bold">Ayman M Ezzeldin</h2>
         </div>
 
         <p className="mx-auto flex flex-col justify-evenly items-center mt-6 max-w-md text-center leading-relaxed text-gray-500">
