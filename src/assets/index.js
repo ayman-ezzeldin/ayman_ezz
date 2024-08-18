@@ -39,6 +39,7 @@ import animation from './animation.png'
 import foodies from './foodies.png'
 import tic from './tic.png'
 import world from './world.png'
+import kasper from './kasper.png'
 
 export {
   logo,
@@ -79,4 +80,5 @@ export {
   foodies,
   tic,
   world,
+  kasper,
 };

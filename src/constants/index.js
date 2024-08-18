@@ -32,6 +32,7 @@ import {
   foodies,
   tic,
   world,
+  kasper,
 } from "../assets";
 
 export const navLinks = [
@@ -310,6 +311,24 @@ const projects = [
     image: world,
     source_code_link: "https://github.com/Ayman-ezzeldin/World-App",
     source_demo_link: "https://world-app-henna.vercel.app",
+  },
+  {
+    name: "Kapser",
+    description:
+      "Kasper App, Hello WorldWe Are Kasper We Make Art, you can get it.",
+    tags: [
+      {
+        name: "HTML",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: kasper,
+    source_code_link: "https://github.com/Ayman-ezzeldin/kasper",
+    source_demo_link: "https://kasper-bice.vercel.app",
   },
   
 ];
