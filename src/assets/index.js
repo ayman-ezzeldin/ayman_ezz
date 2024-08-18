@@ -76,4 +76,5 @@ export {
   gdsc,
   animation,
   foodies,
+  tic,
 };

@@ -249,28 +249,6 @@ const projects = [
     source_demo_link: "https://ayman-ezz.vercel.app",
   },
   {
-    name: "Tic-tac-toe",
-    description:
-      "Web application that enables tow users to play tic-tac-toe game, see who is the winner  and can share you game.",
-    tags: [
-      {
-        name: "React JS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "State",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "css",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: tic,
-    source_code_link: "https://github.com/Ayman-ezzeldin/Tic-tac-toe",
-    source_demo_link: "https://tic-tac-toe-snowy-theta.vercel.app",
-  },
-  {
     name: "Foodies",
     description:
       "Web application that enables users to see meals, view varient of food  and can share you own meal.",
@@ -292,6 +270,29 @@ const projects = [
     source_code_link: "https://github.com/Ayman-ezzeldin/foodies",
     source_demo_link: "https://foodies-kappa.vercel.app",
   },
+  {
+    name: "Tic-tac-toe",
+    description:
+      "Web application that enables tow users to play tic-tac-toe game, see who is the winner  and can share you game.",
+    tags: [
+      {
+        name: "React JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "State",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "css",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: tic,
+    source_code_link: "https://github.com/Ayman-ezzeldin/Tic-tac-toe",
+    source_demo_link: "https://tic-tac-toe-snowy-theta.vercel.app",
+  },
+  
 ];
 
 export { services, technologies, experiences, testimonials, projects };
