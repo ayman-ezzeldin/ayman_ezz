@@ -273,7 +273,7 @@ const projects = [
   {
     name: "Tic-tac-toe",
     description:
-      "Web application that enables tow users to play tic-tac-toe game, see who is the winner  and can share you game.",
+      "Web application that enables tow users to play tic-tac-toe game, see who is the winner.",
     tags: [
       {
         name: "React JS",
