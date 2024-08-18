@@ -30,6 +30,7 @@ import {
   gdsc,
   animation,
   foodies,
+  tic,
 } from "../assets";
 
 export const navLinks = [
@@ -246,6 +247,28 @@ const projects = [
     image: portfolio,
     source_code_link: "https://github.com/Ayman-ezzeldin/ayman_ezz",
     source_demo_link: "https://ayman-ezz.vercel.app",
+  },
+  {
+    name: "Tic-tac-toe",
+    description:
+      "Web application that enables tow users to play tic-tac-toe game, see who is the winner  and can share you game.",
+    tags: [
+      {
+        name: "React JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "State",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "css",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: foodies,
+    source_code_link: "https://github.com/Ayman-ezzeldin/Tic-tac-toe",
+    source_demo_link: "https://tic-tac-toe-snowy-theta.vercel.app",
   },
   {
     name: "Foodies",

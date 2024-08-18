@@ -37,6 +37,7 @@ import eLearning from './eLearning.png'
 import gdsc from './gdsc.png'
 import animation from './animation.png'
 import foodies from './foodies.png'
+import tic from './tic.png'
 
 export {
   logo,
