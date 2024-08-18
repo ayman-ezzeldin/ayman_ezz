@@ -31,6 +31,7 @@ import {
   animation,
   foodies,
   tic,
+  world,
 } from "../assets";
 
 export const navLinks = [
@@ -273,7 +274,7 @@ const projects = [
   {
     name: "Tic-tac-toe",
     description:
-      "Web application that enables tow users to play tic-tac-toe game, see who is the winner.",
+      "Web application that enables two users to play tic-tac-toe game, see who is the winner.",
     tags: [
       {
         name: "React JS",
@@ -291,6 +292,24 @@ const projects = [
     image: tic,
     source_code_link: "https://github.com/Ayman-ezzeldin/Tic-tac-toe",
     source_demo_link: "https://tic-tac-toe-snowy-theta.vercel.app",
+  },
+  {
+    name: "World App",
+    description:
+      "World Application that see some features and animations, you can get it with basics .",
+    tags: [
+      {
+        name: "HTML",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: world,
+    source_code_link: "https://github.com/Ayman-ezzeldin/World-App",
+    source_demo_link: "https://world-app-henna.vercel.app",
   },
   
 ];

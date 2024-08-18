@@ -38,6 +38,7 @@ import gdsc from './gdsc.png'
 import animation from './animation.png'
 import foodies from './foodies.png'
 import tic from './tic.png'
+import world from './world.png'
 
 export {
   logo,
@@ -77,4 +78,5 @@ export {
   animation,
   foodies,
   tic,
+  world,
 };
