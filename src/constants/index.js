@@ -266,7 +266,7 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: foodies,
+    image: tic,
     source_code_link: "https://github.com/Ayman-ezzeldin/Tic-tac-toe",
     source_demo_link: "https://tic-tac-toe-snowy-theta.vercel.app",
   },
