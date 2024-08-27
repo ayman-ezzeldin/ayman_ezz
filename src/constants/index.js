@@ -349,7 +349,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: kasper,
+    image: guessGame,
     source_code_link: "https://github.com/Ayman-ezzeldin/guess-the-word",
     source_demo_link: "https://guess-the-word-chi.vercel.app",
   },
