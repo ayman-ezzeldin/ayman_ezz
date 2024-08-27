@@ -40,6 +40,7 @@ import foodies from './foodies.png'
 import tic from './tic.png'
 import world from './world.png'
 import kasper from './kasper.png'
+import guessGame from './guessGame.png'
 
 export {
   logo,
@@ -81,4 +82,5 @@ export {
   tic,
   world,
   kasper,
+  guessGame,
 };

@@ -33,6 +33,7 @@ import {
   tic,
   world,
   kasper,
+  guessGame,
 } from "../assets";
 
 export const navLinks = [
@@ -330,7 +331,29 @@ const projects = [
     source_code_link: "https://github.com/Ayman-ezzeldin/kasper",
     source_demo_link: "https://kasper-bice.vercel.app",
   },
-  
+  {
+    name: "Guess Game",
+    description:
+      "Guess Game, Guess The Word and win the game, then you get your points.",
+    tags: [
+      {
+        name: "HTML",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: kasper,
+    source_code_link: "https://github.com/Ayman-ezzeldin/guess-the-word",
+    source_demo_link: "https://guess-the-word-chi.vercel.app",
+  },
+
 ];
 
 export { services, technologies, experiences, testimonials, projects };
