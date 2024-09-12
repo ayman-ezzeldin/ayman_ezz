@@ -8,10 +8,8 @@ Welcome to my personal portfolio! This website showcases my work, projects, and 
 - [Features](#features)
 - [Technologies](#technologies)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
+- [Usage](#usage)
 
 ## About
 
