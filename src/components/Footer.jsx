@@ -75,7 +75,7 @@ const Footer = () => {
             </a>
           </li>
 
-          <li>
+          {/* <li>
             <a
               href="https://www.instagram.com/ayman2ezz/"
               rel="noreferrer"
@@ -96,7 +96,7 @@ const Footer = () => {
                 />
               </svg>
             </a>
-          </li>
+          </li> */}
 
           <li>
             <a
