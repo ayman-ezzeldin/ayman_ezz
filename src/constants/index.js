@@ -137,9 +137,9 @@ const testimonials = [
   {
     testimonial:
       "I thought it was impossible to make a website as beautiful as our product, but Ayman proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
+    name: "karam yassin",
+    designation: "CEO",
+    company: "ZAG ENG",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
