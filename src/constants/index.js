@@ -1,10 +1,4 @@
-import {
-  creator,
-  web,
-  javascript,
-  reactjs,
-  typescript,
-  tailwind,
+/* was in import 
   mobile,
   backend,
   html,
@@ -23,6 +17,15 @@ import {
   jobit,
   tripguide,
   threejs,
+*/
+
+import {
+  creator,
+  web,
+  javascript,
+  reactjs,
+  typescript,
+  tailwind,
   zageng ,
   nextJs,
   portfolio,
