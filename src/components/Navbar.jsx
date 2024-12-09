@@ -1,15 +1,17 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import { styles } from "../styles"
-import { navLinks } from "../constants"
-import { logo, menu, close } from "../assets"
+import { styles } from "../styles";
+import { navLinks } from "../constants";
+import { logo, menu, close } from "../assets";
 const Navbar = () => {
-
-  const [active, setActive] = useState("")
-  const [toggle , setToggle] = useState(false)
+  const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(false);
+  const location = window.location.pathname;
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center bg-black py-5 sticky top-0 z-50 border-b-2 border-gray-900 `} >
+    <nav
+      className={`${styles.paddingX} w-full flex items-center bg-black py-5 sticky top-0 z-50 border-b-2 border-gray-900 `}
+    >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
@@ -19,7 +21,12 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img
+            loading="lazy"
+            src={logo}
+            alt="logo"
+            className="w-9 h-9 object-contain"
+          />
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
             Ayman &nbsp;
             <span className="sm:block hidden"> | Frontend Developer</span>
@@ -27,20 +34,39 @@ const Navbar = () => {
         </Link>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <Link
-              to={`/${link.id}`}
-              key={link.id}
-              className={`${
-                active === link.title
-                  ? "text-white"
-                  : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </Link>
-          ))}
+          <Link
+            to="/resume"
+            className={`${
+              active === "Resume" ? "text-white" : "text-secondary"
+            } hover:text-white text-[18px] font-medium cursor-pointer `}
+            onClick={() => setActive("Resume")}
+          >
+            Resume
+          </Link>
+          {navLinks.map((link) =>
+            location !== "/" ? (
+              <Link
+                to={`/`}
+                key={link.id}
+                className={`${
+                  active === link.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => setActive(link.title)}
+              >
+                <a href={`#${link.id}`}>{link.title}</a>
+              </Link>
+            ) : (
+              <li
+                key={link.id}
+                className={`${
+                  active === link.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => setActive(link.title)}
+              >
+                <a href={`#${link.id}`}>{link.title}</a>
+              </li>
+            )
+          )}
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -49,34 +75,54 @@ const Navbar = () => {
             alt="menu"
             className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => {
-              setToggle(!toggle)
+              setToggle(!toggle);
             }}
           />
-          <div className={`${!toggle ? "hidden" : "flex"} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`} >
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title
-                      ? "text-white"
-                      : "text-secondary"
-                  } font-poppins font-medium cursor-pointer text-[16px]`}
-                  onClick={() => {
-                    setToggle(!toggle)
-                    setActive(link.title)
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
+              <Link
+                to="/resume"
+                className={`${
+                  active === "Resume" ? "text-white" : "text-secondary"
+                }`}
+                onClick={() => setActive("Resume")}
+              >
+                Resume
+              </Link>
+              {navLinks.map((link) =>
+            location !== "/" ? (
+              <Link
+                to={`/`}
+                key={link.id}
+                className={`${
+                  active === link.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => setActive(link.title)}
+              >
+                <a href={`#${link.id}`}>{link.title}</a>
+              </Link>
+            ) : (
+              <li
+                key={link.id}
+                className={`${
+                  active === link.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => setActive(link.title)}
+              >
+                <a href={`#${link.id}`}>{link.title}</a>
+              </li>
+            )
+          )}
             </ul>
           </div>
         </div>
       </div>
-
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

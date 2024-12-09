@@ -30,6 +30,7 @@ const ProjectCard = ({
       >
         <div className="relative w-full h-[230px]">
           <img
+          loading="lazy"
             src={image}
             alt="project_image"
             className="w-full h-full object-cover rounded-2xl"
@@ -41,6 +42,7 @@ const ProjectCard = ({
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <img
+              loading="lazy"
                 src={demo}
                 alt="source code"
                 className="w-1/2 h-1/2 object-contain"
@@ -91,7 +93,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Make up to <span className="text-[#3aef8b] font-bold" >15+ project</span>. Following projects showcases my skills and experience through
+          Make up to <span className="text-[#32c976] font-bold" >15+ project</span>. Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
           links to code repositories and live demos in it. It reflects my
           ability to solve complex problems, work with different technologies,
