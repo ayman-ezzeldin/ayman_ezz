@@ -4,6 +4,7 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      scrollBehavior : ['responsive'],
       colors: {
         primary: "#050816",
         secondary: "#aaa6c3",
