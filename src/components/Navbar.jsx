@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
@@ -8,6 +8,14 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const location = window.location.pathname;
+  
+  useEffect(()=> {
+    setToggle(false)
+  },[active])
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  },[location])
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center bg-black py-5 sticky top-0 z-50 border-b-2 border-gray-900 `}
@@ -42,6 +50,15 @@ const Navbar = () => {
             onClick={() => setActive("Resume")}
           >
             Resume
+          </Link>
+          <Link
+            to="/blog"
+            className={`${
+              active === "Blog" ? "text-white" : "text-secondary"
+            } hover:text-white text-[18px] font-medium cursor-pointer `}
+            onClick={() => setActive("Blog")}
+          >
+            Blog
           </Link>
           {navLinks.map((link) =>
             location !== "/" ? (
@@ -93,30 +110,39 @@ const Navbar = () => {
               >
                 Resume
               </Link>
-              {navLinks.map((link) =>
-            location !== "/" ? (
               <Link
-                to={`/`}
-                key={link.id}
+                to="/blog"
                 className={`${
-                  active === link.title ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
-                onClick={() => setActive(link.title)}
+                  active === "Blog" ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer `}
+                onClick={() => setActive("Blog")}
               >
-                <a href={`#${link.id}`}>{link.title}</a>
+                Blog
               </Link>
-            ) : (
-              <li
-                key={link.id}
-                className={`${
-                  active === link.title ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
-                onClick={() => setActive(link.title)}
-              >
-                <a href={`#${link.id}`}>{link.title}</a>
-              </li>
-            )
-          )}
+              {navLinks.map((link) =>
+                location !== "/" ? (
+                  <Link
+                    to={`/`}
+                    key={link.id}
+                    className={`${
+                      active === link.title ? "text-white" : "text-secondary"
+                    } hover:text-white text-[18px] font-medium cursor-pointer`}
+                    onClick={() => setActive(link.title)}
+                  >
+                    <a href={`#${link.id}`}>{link.title}</a>
+                  </Link>
+                ) : (
+                  <li
+                    key={link.id}
+                    className={`${
+                      active === link.title ? "text-white" : "text-secondary"
+                    } hover:text-white text-[18px] font-medium cursor-pointer`}
+                    onClick={() => setActive(link.title)}
+                  >
+                    <a href={`#${link.id}`}>{link.title}</a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         </div>

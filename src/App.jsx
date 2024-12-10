@@ -13,6 +13,8 @@ import {
 import Footer from "./components/Footer";
 import Resume from "./Pages/Resume";
 import NotFound from "./Pages/NotFound";
+import Blog from "./Pages/Blog";
+import BlogPost from "./Pages/BlogPost";
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
             }
           />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
