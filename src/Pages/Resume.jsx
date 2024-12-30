@@ -6,7 +6,7 @@ const Resume = () => {
           <h1 className="text-4xl font-bold text-gray-200">My Resume</h1>
           <p className="text-lg text-gray-400 mt-2">A summary of my qualifications and experiences</p>
           <a
-            href="/public/Ayman_Ezzeldin - Front_end .pdf"
+            href="/Ayman-ezz_front-end.pdf"
             download
             className="mt-4 inline-block bg-blue-800 text-white py-2 px-4 rounded-lg hover:bg-blue-900"
           >
