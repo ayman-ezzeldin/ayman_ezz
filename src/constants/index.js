@@ -1,23 +1,3 @@
-/* was in import 
-  mobile,
-  backend,
-  html,
-  css,
-  redux,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
-*/
 
 import {
   creator,

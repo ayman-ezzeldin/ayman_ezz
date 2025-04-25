@@ -1,6 +1,6 @@
-import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
+import logo from "./logo.png";
+import backend from "./backend.jpg";
+import creator from "./creator.jpg";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
@@ -23,24 +23,16 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import nextJs from './tech/nextJs.jpeg'
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
-
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-import zageng from "./zageng.png";
-import portfolio from './portfolio.png'
-import eLearning from './eLearning.png'
+import zageng from "./zageng.jpg";
+import portfolio from './portfolio.jpg'
+import eLearning from './eLearning.jpg'
 import gdsc from './gdsc.png'
-import animation from './animation.png'
-import foodies from './foodies.png'
-import tic from './tic.png'
-import world from './world.png'
-import kasper from './kasper.png'
-import guessGame from './guessGame.png'
+import animation from './animation.jpg'
+import foodies from './foodies.jpg'
+import tic from './tic.jpg'
+import world from './world.jpg'
+import kasper from './kasper.jpg'
+import guessGame from './guessGame.jpg'
 
 export {
   logo,
@@ -64,13 +56,6 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
   demo,
   zageng,
   nextJs,
