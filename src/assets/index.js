@@ -8,25 +8,17 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 import demo from "./demo.svg";
 
-import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
+
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
+import javascript from "./tech/javascript.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
 import nextJs from './tech/nextJs.jpeg'
 
 import zageng from "./zageng.jpg";
 import portfolio from './portfolio.jpg'
 import eLearning from './eLearning.jpg'
-import gdsc from './gdsc.png'
+import gdsc from './gdsc.jpg'
 import animation from './animation.jpg'
 import foodies from './foodies.jpg'
 import tic from './tic.jpg'
@@ -43,19 +35,11 @@ export {
   github,
   menu,
   close,
-  css,
-  docker,
-  figma,
-  git,
-  html,
   javascript,
-  mongodb,
-  nodejs,
+
   reactjs,
-  redux,
   tailwind,
   typescript,
-  threejs,
   demo,
   zageng,
   nextJs,

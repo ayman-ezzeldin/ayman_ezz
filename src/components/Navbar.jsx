@@ -37,11 +37,11 @@ const Navbar = () => {
           />
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
             Ayman &nbsp;
-            <span className="sm:block hidden"> | Frontend Developer</span>
+            <span className="sm:block hidden"> Ezz</span>
           </p>
         </Link>
 
-        <ul className="list-none hidden lg:flex flex-row gap-10">
+        <ul className="list-none hidden md:flex flex-row gap-10">
           <Link
             to="/resume"
             className={`${
@@ -86,7 +86,7 @@ const Navbar = () => {
           )}
         </ul>
 
-        <div className="lg:hidden flex flex-1 justify-end items-center">
+        <div className="md:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
