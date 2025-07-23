@@ -1,17 +1,21 @@
-import { useState, useRef } from "react";
+import { useState, useRef, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
-import {  slideIn } from "../utils/motion";
-import AlertCorrect from "./AlertCorrect";
-import AlertWrong from "./AlertWrong";
+import { slideIn } from "../utils/motion";
+import Loading from "./Loading";
+
+const AlertWrong = lazy(() => import("./AlertWrong"));
+const AlertCorrect = lazy(() => import("./AlertCorrect"));
+const EarthCanvas = lazy(() =>
+  import("./canvas").then((mod) => ({ default: mod.EarthCanvas }))
+);
 
 const Contact = () => {
   const formRef = useRef();
-  const [correctAlert , setCorrectAlert] = useState(false)
-  const [wrongAlert , setWrongAlert] = useState(false)
+  const [correctAlert, setCorrectAlert] = useState(false);
+  const [wrongAlert, setWrongAlert] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -21,7 +25,7 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm({...form , [name]: value})
+    setForm({ ...form, [name]: value });
   };
 
   const handleSubmit = (e) => {
@@ -35,8 +39,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_xesepsi',
-        'template_5krcean',
+        "service_xesepsi",
+        "template_5krcean",
         {
           from_name: form.name,
           to_name: "Ayman",
@@ -44,26 +48,29 @@ const Contact = () => {
           to_email: "aymanmae12@gmail.com",
           message: form.message,
         },
-        'SKyo4AsXtg4jRsAcE'
-      ).then(() => {
-        setCorrectAlert(true)
-        setTimeout(() => {
-          setCorrectAlert(false)
-        }, 2000);
-        setLoading(false);
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        })
-      }, (error) => {
-        setWrongAlert(true)
-        setTimeout(() => {
-          setWrongAlert(false)
-        },2000)
-        setLoading(false);
-      })
-
+        "SKyo4AsXtg4jRsAcE"
+      )
+      .then(
+        () => {
+          setCorrectAlert(true);
+          setTimeout(() => {
+            setCorrectAlert(false);
+          }, 2000);
+          setLoading(false);
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setWrongAlert(true);
+          setTimeout(() => {
+            setWrongAlert(false);
+          }, 2000);
+          setLoading(false);
+        }
+      );
   };
 
   return (
@@ -124,21 +131,42 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-        { correctAlert && <motion.div variants={slideIn("bottom", "tween", 0.2, 1)} className="mt-10" >
-          <AlertCorrect />
-        </motion.div>}
-        { wrongAlert && <motion.div variants={slideIn("bottom", "tween", 0.2, 1)} className="mt-10" >
-          <AlertWrong />
-        </motion.div>}
+        {correctAlert && (
+          <Suspense
+            fallback={<Loading />}
+          >
+            <motion.div
+              variants={slideIn("bottom", "tween", 0.2, 1)}
+              className="mt-10"
+            >
+              <AlertCorrect />
+            </motion.div>
+          </Suspense>
+        )}
+
+        {wrongAlert && (
+          <Suspense
+            fallback={<Loading />}
+          >
+            <motion.div
+              variants={slideIn("bottom", "tween", 0.2, 1)}
+              className="mt-10"
+            >
+              <AlertWrong />
+            </motion.div>
+          </Suspense>
+        )}
       </motion.div>
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        <EarthCanvas />
+        <Suspense fallback={<Loading />}>
+          <EarthCanvas />
+        </Suspense>
       </motion.div>
     </div>
   );
 };
-export default SectionWrapper(Contact, "contact")
+export default SectionWrapper(Contact, "contact");

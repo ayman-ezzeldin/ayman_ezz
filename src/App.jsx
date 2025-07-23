@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import {
   About,
   Contact,
@@ -8,43 +9,49 @@ import {
   Navbar,
   Tech,
   Works,
-  StarsCanvas,
 } from "./components";
+const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 import Footer from "./components/Footer";
-import Resume from "./Pages/Resume";
-import NotFound from "./Pages/NotFound";
-import Blog from "./Pages/Blog";
-import BlogPost from "./Pages/BlogPost";
+import Loading from "./components/Loading";
+const Resume = lazy(() => import("./Pages/Resume"));
+const NotFound = lazy(() => import("./Pages/NotFound"));
+const Blog = lazy(() => import("./Pages/Blog"));
+const BlogPost = lazy(() => import("./Pages/BlogPost"));
+
 
 function App() {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary ">
         <Navbar />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div className="  ">
-                <Hero />
-                <About />
-                <Experience />
-                <Tech />
-                <Works />
-                <Feedbacks />
-                <div className="relative z-0">
-                  <Contact />
-                  <StarsCanvas />
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="  ">
+                  <Hero />
+                  <About />
+                  <Experience />
+                  <Tech />
+                  <Works />
+                  <Feedbacks />
+                  <div className="relative z-0">
+                    <Contact />
+                    <Suspense fallback={<Loading />}>
+                      <StarsCanvas />
+                    </Suspense>
+                  </div>
+                  <Footer />
                 </div>
-                <Footer />
-              </div>
-            }
-          />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+              }
+            />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </div>
     </BrowserRouter>
   );

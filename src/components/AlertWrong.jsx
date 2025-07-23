@@ -1,4 +1,3 @@
-import React from "react";
 
 const AlertWrong = () => {
   return (
@@ -23,9 +22,6 @@ const AlertWrong = () => {
         <strong className="block font-medium"> Something went wrong </strong>
       </div>
 
-      {/* <p className="mt-2 text-sm text-red-700">
-        Something went wrong"
-      </p> */}
     </div>
   );
 };
