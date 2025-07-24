@@ -1,9 +1,8 @@
-import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
+const motion = await import("framer-motion").then((mod) => mod.motion);
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -28,7 +27,7 @@ const ExperienceCard = ({ experience }) => {
           loading="lazy"
             src={experience.icon}
             alt={experience.company_name}
-            className='w-[80%] h-[70%] object-contain rounded-full  '
+            className='w-[80%] h-[70%] object-contain aspect-square rounded-full  '
           />
         </div>
       }

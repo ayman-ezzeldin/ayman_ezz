@@ -1,15 +1,21 @@
-import React from "react";
-import { motion } from "framer-motion";
+const motion = await import("framer-motion").then((mod) => mod.motion);
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 
-const FeedbackCard = ({ index, testimonial, name, designation, company,image }) => (
+const FeedbackCard = ({
+  index,
+  testimonial,
+  name,
+  designation,
+  company,
+  image,
+}) => (
   <motion.div
     variants={fadeIn("", "", index * 0.5, 0.75)}
-    className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
+    className=" p-10 rounded-3xl bg-black-200 w-full"
   >
     <p className="text-white font-black text-[48px]">"</p>
 
@@ -28,13 +34,6 @@ const FeedbackCard = ({ index, testimonial, name, designation, company,image }) 
           {designation} , {company}
         </p>
       </div>
-
-      {/* <img
-        src={image}
-        loading="lazy"
-        alt={`feedback-by-${name}`}
-        className="w-10 h-10 rounded-full object-cover"
-      /> */}
     </div>
   </motion.div>
 );
@@ -49,7 +48,7 @@ const Feedbacks = () => {
           <p className={styles.sectionSubText}>What others say</p>
           <h2 className={styles.sectionHeadText}>Testimonials</h2>
         </motion.div>
-        <div className="mt-20 flex flex-wrap justify-center gap-7">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-7">
           {testimonials.map((test, index) => (
             <FeedbackCard key={test.name} index={index} {...test} />
           ))}

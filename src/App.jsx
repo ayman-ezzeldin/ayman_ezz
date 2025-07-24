@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import { useInView } from "react-intersection-observer";
+
 import {
   About,
   Contact,
@@ -8,44 +10,60 @@ import {
   Hero,
   Navbar,
   Tech,
-  Works,
 } from "./components";
-const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
+
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
+import { Toaster } from "react-hot-toast";
+
+const Works = lazy(()=> import("./components/Works"));
+const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 const Resume = lazy(() => import("./Pages/Resume"));
 const NotFound = lazy(() => import("./Pages/NotFound"));
 const Blog = lazy(() => import("./Pages/Blog"));
 const BlogPost = lazy(() => import("./Pages/BlogPost"));
 
-
 function App() {
+  const { ref: starsRef, inView: starsVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary ">
+    <Toaster position="bottom-right" />
+      <div className="relative z-0 bg-bgColor">
         <Navbar />
+
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route
               path="/"
               element={
-                <div className="  ">
+                <div className="">
                   <Hero />
                   <About />
                   <Experience />
                   <Tech />
-                  <Works />
+                  <Suspense fallback={<Loading />}>
+                    <Works />
+                  </Suspense>
                   <Feedbacks />
-                  <div className="relative z-0">
+
+                  <div className="relative z-0" ref={starsRef}>
                     <Contact />
-                    <Suspense fallback={<Loading />}>
-                      <StarsCanvas />
-                    </Suspense>
+                    {starsVisible && (
+                      <Suspense fallback={<Loading />}>
+                        <StarsCanvas />
+                      </Suspense>
+                    )}
                   </div>
+
                   <Footer />
                 </div>
               }
             />
+
             <Route path="/resume" element={<Resume />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />

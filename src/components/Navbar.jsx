@@ -1,9 +1,11 @@
 import { useEffect,memo, useState } from "react";
 import { Link } from "react-router-dom";
-
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import logo from "../assets/logo.webp"; 
+import menu from "../assets/menu.svg";
+import close from "../assets/close.svg";
+
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -18,7 +20,7 @@ const Navbar = () => {
   },[location])
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center bg-black py-5 sticky top-0 z-50 border-b-2 border-gray-900 `}
+      className={`${styles.paddingX} w-full flex items-center bg-bgColor py-5 sticky top-0 z-50  `}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -33,11 +35,10 @@ const Navbar = () => {
             loading="lazy"
             src={logo}
             alt="logo"
-            className="w-12 h-12 object-contain"
+            className="w-12 h-12 object-contain aspect-square"
           />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
-            Ayman &nbsp;
-            <span className="sm:block hidden"> Ezz</span>
+          <p className={`text-[18px] ${styles.gridentText} font-bold cursor-pointer flex `}>
+            Ayman Ezz
           </p>
         </Link>
 
@@ -90,7 +91,7 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            className="w-[28px] h-[28px] object-contain aspect-square cursor-pointer"
             onClick={() => {
               setToggle(!toggle);
             }}

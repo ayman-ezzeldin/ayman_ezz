@@ -6,18 +6,20 @@ import {
   reactjs,
   typescript,
   tailwind,
-  zageng ,
   nextJs,
-  portfolio,
-  eLearning,
-  gdsc,
-  animation,
-  foodies,
-  tic,
-  world,
-  kasper,
-  guessGame,
 } from "../assets";
+
+
+import zageng from "../assets/zageng.jpg";
+import portfolio from '../assets/portfolio.webp'
+import eLearning from '../assets/eLearning.jpg'
+import gdsc from '../assets/gdsc.jpg'
+import animation from '../assets/animation.webp'
+import foodies from '../assets/foodies.jpg'
+import tic from '../assets/tic.jpg'
+import world from '../assets/world.jpg'
+import kasper from '../assets/kasper.jpg'
+import guessGame from '../assets/guessGame.jpg'
 
 export const navLinks = [
   {
@@ -220,7 +222,7 @@ const projects = [
       "Web application that enables users to see my experience, view Projects  and can contact me.",
     tags: [
       {
-        name: "Next JS",
+        name: "React JS",
         color: "green-text-gradient",
       },
       {

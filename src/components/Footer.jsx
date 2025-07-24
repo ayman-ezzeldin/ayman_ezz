@@ -1,15 +1,14 @@
-import React from "react";
 import { navLinks } from "../constants";
 import { useState } from "react";
-import { logo } from "../assets";
+import logo from "../assets/logo.webp"; // Updated to use the new logo format
 
 const Footer = () => {
   const [active, setActive] = useState("");
   return (
     <footer className=" max-w-7xl mx-auto">
       <div className="mx-auto max-w-5xl bg-transparent px-4 py-16 sm:px-6 lg:px-8">
-        <div className="flex justify-center items-center gap-3 text-teal-600">
-          <img loading="lazy" src={logo} alt="logo" className="w-16 h-16 object-contain" />
+        <div className="flex justify-center items-center gap-3 text-[#1891C8]">
+          <img loading="lazy" src={logo} alt="logo" className="w-16 h-16 object-contain aspect-square" />
           <h2 className="text-2xl font-bold">Ayman M Ezzeldin</h2>
         </div>
 
