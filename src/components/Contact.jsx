@@ -1,5 +1,5 @@
 import { useState, useRef, lazy, Suspense } from "react";
-const motion = await import("framer-motion").then((mod) => mod.motion);
+import { motion } from "framer-motion"
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";

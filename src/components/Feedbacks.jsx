@@ -1,5 +1,4 @@
-const motion = await import("framer-motion").then((mod) => mod.motion);
-
+import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";

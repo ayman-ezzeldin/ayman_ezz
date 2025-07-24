@@ -1,7 +1,6 @@
 import Tilt from "react-parallax-tilt";
 import { demo, github } from "../assets";
-const motion = await import("framer-motion").then((mod) => mod.motion);
-
+import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 
 const ProjectCard = ({
@@ -18,7 +17,7 @@ const ProjectCard = ({
       variants={fadeIn("up", "spring", index * 0.2, 0.4)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.05 }} 
+      viewport={{ once: true, amount: 0.05 }}
     >
       <Tilt
         options={{

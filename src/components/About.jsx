@@ -4,8 +4,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { lazy, Suspense } from "react";
 import Loading from "./Loading";
-const motion = await import("framer-motion").then((mod) => mod.motion);
-
+import { motion } from "framer-motion";
 
 const ServiceCard = lazy(() => import("./ServiceCard"));
 
@@ -38,4 +37,4 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About , 'about');
+export default SectionWrapper(About, "about");

@@ -1,7 +1,6 @@
 import Tilt from "react-parallax-tilt";
 import { fadeIn } from "../utils/motion";
-const motion = await import("framer-motion").then((mod) => mod.motion);
-
+import { motion } from "framer-motion";
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">

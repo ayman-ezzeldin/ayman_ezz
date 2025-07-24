@@ -16,14 +16,10 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: [
-            "react",
-            "react-dom",
-            "framer-motion",
-            "@react-three/fiber",
-            "@react-three/drei",
-            "react-router-dom",
-          ],
+          react: ["react", "react-dom"],
+          router: ["react-router-dom"],
+          three: ["@react-three/fiber", "@react-three/drei"],
+          animation: ["framer-motion"],
         },
       },
     },
