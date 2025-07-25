@@ -1,6 +1,6 @@
 import { navLinks } from "../constants";
 import { useState } from "react";
-import logo from "../assets/logo.webp"; // Updated to use the new logo format
+import logo from "../assets/logo.webp"; 
 import { styles } from "../styles";
 
 const Footer = () => {
