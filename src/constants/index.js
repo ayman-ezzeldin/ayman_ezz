@@ -20,6 +20,8 @@ import tic from '../assets/tic.jpg'
 import world from '../assets/world.jpg'
 import kasper from '../assets/kasper.jpg'
 import guessGame from '../assets/guessGame.jpg'
+import depi from '../assets/depiEN.webp'
+import engZag from '../assets/engZag.webp'
 
 export const navLinks = [
   {
@@ -45,10 +47,6 @@ const services = [
     title: "Frontend Developer",
     icon: creator,
   },
-  // {
-  //   title: "Backend Developer",
-  //   icon: backend,
-  // },
 ];
 
 const technologies = [
@@ -77,46 +75,68 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "GDSC ZAG",
+    title: "Full Stack Developer Trainee",
+    company_name: "Digital Egypt Pioneers Initiative (DEPI)",
+    icon: depi, 
+    iconBg: "#fff",
+    date: "May 2024 – November 2024",
+    points: [
+      "Undergoing intensive hands-on training in full stack web development.",
+      "Learning advanced frontend and backend technologies, deployment, and best practices.",
+      "Participating in real-world projects and collaborative development teams."
+    ],
+  },
+  {
+    title: "Frontend Developer (React.js & Next.js)",
+    company_name: "GDSG ZAG",
     icon: reactjs,
     iconBg: "#fff",
-    date: "October 2023 - Now",
+    date: "October 2023 – Present",
     points: [
-      'Make up to 10+ project.',
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and maintained 15+ web applications using React.js and Next.js.",
+      "Focused on building responsive, high-performance UIs with attention to user experience and design consistency.",
+      "Collaborated with designers and team members to deliver clean, scalable code and reusable components.",
+      "Reviewed code, shared feedback, and contributed to overall code quality and team growth."
     ],
   },
   {
-    title: "GDSC ZAG",
-    company_name: "Lead of frontend team",
+    title: "Frontend Team Lead",
+    company_name: "GDG On Campus ZAG",
     icon: gdsc,
     iconBg: "#fff",
-    date: "October 2023 - Now",
+    date: "October 2023 – Present",
     points: [
-      "Developing and maintaining my soft skills.",
-      "Lead our core-team , members and providing leadership and guidance to our team members.",
-      "Collaborating with my teams including designers and other developers to create high-quality products.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Guided the frontend team within the GDG core team, overseeing project workflows and timelines.",
+      "Improved team coordination and collaboration across different roles.",
+      "Supported junior developers through mentorship and hands-on code reviews.",
+      "Helped deliver production-level community-driven web projects."
     ],
   },
   {
-    title: "Next.js Developer",
-    company_name: "GDSC ZAG",
-    icon: nextJs,
+    title: "Zag-Eng Member",
+    company_name: "Zag-Eng",
+    icon: zageng, // replace with your Zag-Eng icon
     iconBg: "#fff",
-    date: "October 2023 - Now",
+    date: "December 2022 – July 2023",
     points: [
-      "Make up to 5+ project.",
-      "Developing and maintaining web applications using Next.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Sharpened technical skills through online self-study, interactive learning modules, and peer collaboration.",
+      "Completed practical assignments and contributed to technical discussions with peers and instructors.",
+      "Built a strong foundation in frontend development and web fundamentals."
     ],
   },
+  {
+    title: "B.Sc. in Computer and Systems Engineering",
+    company_name: "Zagazig University",
+    icon: engZag, // replace with university icon
+    iconBg: "#fff",
+    date: "October 2020 – July 2025",
+    points: [
+      "Studied core engineering and computer science subjects including data structures, algorithms, and software engineering.",
+      "Engaged in academic projects and student tech activities across the years."
+    ],
+  }
 ];
+
 
 const testimonials = [
   {

@@ -20,11 +20,16 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         initial="hidden"
         whileInView="show"
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[17px] max-w-5xl leading-[30px]"
       >
-        I'm a skilled sofware engineer with experience in web development.I'm a
-        student of CSE at Google DSC Zag. I'm passionate about web development
-        and I'm always looking for new projects to work on.
+        I'm a Computer and Systems Engineering graduate (Class of 2025) with a
+        strong focus on web development. Over the past few years, I’ve built 15+
+        projects — some delivered to real clients — using modern tools like
+        React, Next.js, and Tailwind CSS. I care deeply about clean design,
+        performance, and user experience. Currently, I’m sharpening my frontend
+        skills while exploring backend development to grow as a full-stack
+        engineer. I also led the frontend team at GDG On Campus for 2 years,
+        mentoring and building with amazing teams.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10 justify-center">
         <Suspense fallback={<Loading />}>

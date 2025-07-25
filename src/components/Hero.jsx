@@ -16,11 +16,11 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} ${styles.gridentText}`}>
-            Hi, I'm Ayman Ezzedlin
+            Hi, I'm Ayman M Ezzedlin
           </h1>
           <p className={`${styles.heroSubText} ${styles.gridentText} mt-2`}>
-            CSE student | React developer <br className="sm:block hidden" />
-            Front end lead at Google DSC Zag
+            CSE Graduate | Frontend developer <br className="sm:block hidden" />
+            Frontend Lead at GDG On Campus
           </p>
         </div>
       </div>
