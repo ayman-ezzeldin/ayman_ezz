@@ -1,24 +1,27 @@
 import { navLinks } from "../constants";
 import { useState } from "react";
 import logo from "../assets/logo.webp"; // Updated to use the new logo format
+import { styles } from "../styles";
 
 const Footer = () => {
   const [active, setActive] = useState("");
   return (
     <footer className=" max-w-7xl mx-auto">
       <div className="mx-auto max-w-5xl bg-transparent px-4 py-16 sm:px-6 lg:px-8">
-        <div className="flex justify-center items-center gap-3 text-[#1891C8]">
+        <div className={`flex justify-center items-center gap-3 ${styles.gridentText}`}> 
           <img loading="lazy" src={logo} alt="logo" className="w-16 h-16 object-contain aspect-square" />
           <h2 className="text-2xl font-bold">Ayman M Ezzeldin</h2>
         </div>
 
-        <p className="mx-auto flex flex-col justify-evenly items-center mt-6 max-w-md text-center leading-relaxed text-gray-500">
+        <p className={`mx-auto flex flex-col justify-evenly items-center mt-6 max-w-md text-center leading-relaxed ${styles.gridentText} `}>
           <a
             href="mailto:aymanmae12@gmail.com"
             className="mb-4 flex gap-2 items-center justify-center md:justify-start"
           >
             <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
               <svg
+                aria-label="الاتصال عبر البريد الالكتروني  aymanmae12@gmail.com"
+
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
@@ -35,6 +38,7 @@ const Footer = () => {
           >
             <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
               <svg
+                aria-label="الاتصال برقم الهاتف 01275574271"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
@@ -56,10 +60,12 @@ const Footer = () => {
               href="https://www.facebook.com/ayman.ezz.581525/"
               rel="noreferrer"
               target="_blank"
+              aria-label="Connect with me on Facebook"
               className="text-gray-700 transition hover:text-gray-700/75"
             >
               <span className="sr-only">Facebook</span>
               <svg
+                aria-label="Conect with me on Facebook"
                 className="h-6 w-6 hover:text-white text-gray-400"
                 fill="currentColor"
                 viewBox="0 0 24 24"
@@ -79,10 +85,12 @@ const Footer = () => {
               href="https://github.com/ayman-ezzeldin"
               rel="noreferrer"
               target="_blank"
+              aria-label="Check my GitHub"
               className="text-gray-700 transition hover:text-gray-700/75"
             >
               <span className="sr-only">GitHub</span>
               <svg
+                aria-label="Check my GitHub"
                 className="h-6 w-6 hover:text-white text-gray-400"
                 fill="currentColor"
                 viewBox="0 0 24 24"
@@ -101,9 +109,11 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/in/ayman-ezzeldin/"
               target="_blank"
+              aria-label="Connect with me on LinkedIn"
               className="me-6 [&>svg]:h-4 [&>svg]:w-4 text-gray-400 h-6 w-6 hover:text-white transition-all "
             >
               <svg
+                aria-label="Connect with me on LinkedIn"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 448 512"
