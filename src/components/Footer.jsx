@@ -130,7 +130,7 @@ const Footer = () => {
               </svg>
             </a>
           </li>
-          
+
           <li>
             <a
               href="https://www.instagram.com/ayman2ezz"
@@ -150,6 +150,28 @@ const Footer = () => {
               </svg>
             </a>
           </li>
+
+          <li>
+  <a
+    href="https://ipn.eg/S/ayman3102/instapay/3A072n"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Pay with InstaPay"
+    className="text-gray-700 transition hover:text-white"
+  >
+    <span className="sr-only">InstaPay</span>
+    <svg
+      className="h-6 w-6 text-gray-400 hover:text-white"
+      viewBox="0 0 48 48"
+      fill="currentColor"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M24 4C13.1 4 4 13.1 4 24s9.1 20 20 20 20-9.1 20-20S34.9 4 24 4zm-2 29.5l-7-7 2.12-2.12L22 27.88l10.88-10.88L35 19.12l-13 13z"/>
+    </svg>
+  </a>
+</li>
+
         </ul>
 
         <ul className="mt-12 sm:flex flex-wrap justify-center list-none hidden  gap-6 md:gap-8 lg:gap-12">
