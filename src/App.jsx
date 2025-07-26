@@ -32,7 +32,7 @@ function App() {
   return (
     <BrowserRouter>
     <Toaster position="bottom-right" />
-      <div className="relative z-0 bg-bgColor">
+      <div className={`relative z-0 bg-bgColor selection:bg-inherit selection:text-primary`}>
         <Navbar />
 
         <Suspense fallback={<Loading />}>

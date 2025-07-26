@@ -1,6 +1,6 @@
 import { navLinks } from "../constants";
 import { useState } from "react";
-import logo from "../assets/logo.webp"; 
+import logo from "../assets/logo.webp";
 import { styles } from "../styles";
 
 const Footer = () => {
@@ -8,12 +8,21 @@ const Footer = () => {
   return (
     <footer className=" max-w-7xl mx-auto">
       <div className="mx-auto max-w-5xl bg-transparent px-4 py-16 sm:px-6 lg:px-8">
-        <div className={`flex justify-center items-center gap-3 ${styles.gridentText}`}> 
-          <img loading="lazy" src={logo} alt="logo" className="w-16 h-16 object-contain aspect-square" />
+        <div
+          className={`flex justify-center items-center gap-3 ${styles.gridentText}`}
+        >
+          <img
+            loading="lazy"
+            src={logo}
+            alt="logo"
+            className="w-16 h-16 object-contain aspect-square"
+          />
           <h2 className="text-2xl font-bold">Ayman M Ezzeldin</h2>
         </div>
 
-        <p className={`mx-auto flex flex-col justify-evenly items-center mt-6 max-w-md text-center leading-relaxed ${styles.gridentText} `}>
+        <p
+          className={`mx-auto flex flex-col justify-evenly items-center mt-6 max-w-md text-center leading-relaxed ${styles.gridentText} `}
+        >
           <a
             href="mailto:aymanmae12@gmail.com"
             className="mb-4 flex gap-2 items-center justify-center md:justify-start"
@@ -21,7 +30,6 @@ const Footer = () => {
             <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
               <svg
                 aria-label="الاتصال عبر البريد الالكتروني  aymanmae12@gmail.com"
-
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
@@ -119,6 +127,26 @@ const Footer = () => {
                 viewBox="0 0 448 512"
               >
                 <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+              </svg>
+            </a>
+          </li>
+          
+          <li>
+            <a
+              href="https://www.instagram.com/ayman2ezz"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow me on Instagram"
+              className="text-gray-700 transition hover:text-white"
+            >
+              <span className="sr-only">Instagram</span>
+              <svg
+                className="h-6 w-6 text-gray-400 hover:text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.75 2a.75.75 0 0 1 .102 1.493L16.5 7a.75.75 0 0 1-.102-1.493L16.5 5.5zm-4.25 2.25a4.25 4.25 0 1 1 0 8.5a4.25 4.25 0 0 1 0-8.5zm0 1.5a2.75 2.75 0 1 0 0 5.5a2.75 2.75 0 0 0 0-5.5z" />
               </svg>
             </a>
           </li>

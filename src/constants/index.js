@@ -9,7 +9,9 @@ import {
   nextJs,
 } from "../assets";
 
-
+import mffstore from '../assets/mffstore.webp'
+import aino from '../assets/AINO.webp'
+import alhelal from '../assets/alhelal.webp'
 import zageng from "../assets/zageng.jpg";
 import portfolio from '../assets/portfolio.webp'
 import eLearning from '../assets/eLearning.jpg'
@@ -166,6 +168,124 @@ const testimonials = [
 ];
 
 const projects = [
+
+  // mff store
+  {
+    name: "MFF Store",
+    description:"MFF Systems is a fire safety and security e-commerce platform offering alarms, extinguishers, CCTV systems, and professional installation services.",
+    tags: [
+      {
+        name: "React JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: mffstore,
+    source_demo_link: "https://mff-systems.com/en",
+  },
+  // aino
+  {
+    name: "AINO",
+    description:"Built with modern AI capabilities, it allows users to generate, design, and preview outputs instantly from prompts as an interactive web app.",
+    tags: [
+      {
+        name: "React JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React flow",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: aino,
+    source_demo_link: "https://ai-gen-jmaz.vercel.app/",
+  },
+  // alhelal systems
+  {
+    name: "Alhelal Systems",
+    description:"Al Helal Systems is a leading Egyptian company specializing in fire alarms, firefighting, and security systems. With over 9 years of experience, we have served more than 800 clients across Egypt, providing top-notch design, installation, and maintenance services.",
+      tags: [
+      {
+        name: "Next JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: alhelal,
+    source_demo_link: "https://alhelalsystems.com/en",
+  },
+   // portfolio
+  {
+    name: "My portfolio",
+    description:
+      "Web application that enables users to see my experience, view Projects  and can contact me.",
+    tags: [
+      {
+        name: "React JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "three js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/Ayman-ezzeldin/ayman_ezz",
+    source_demo_link: "https://ayman-ezz.vercel.app",
+  },
+  // world app
+  {
+    name: "World App",
+    description:
+      "World Application that see some features and animations, you can get it with basics .",
+    tags: [
+      {
+        name: "HTML",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: world,
+    source_code_link: "https://github.com/Ayman-ezzeldin/World-App",
+    source_demo_link: "https://world-app-henna.vercel.app",
+  },
+  // kasper
+  {
+    name: "Kapser",
+    description:
+      "Kasper App, Hello WorldWe Are Kasper We Make Art, you can get it.",
+    tags: [
+      {
+        name: "HTML",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: kasper,
+    source_code_link: "https://github.com/Ayman-ezzeldin/kasper",
+    source_demo_link: "https://kasper-bice.vercel.app",
+  },
+  // zag family
   {
     name: "Zag Family",
     description:
@@ -188,6 +308,7 @@ const projects = [
     source_code_link: "https://github.com/Ayman-ezzeldin/ZagEng-Family",
     source_demo_link: "https://zag-eng-family.vercel.app",
   },
+  // Animation
   {
     name: "Animation",
     description:
@@ -210,6 +331,7 @@ const projects = [
     source_code_link: "https://github.com/Ayman-ezzeldin/Animation",
     source_demo_link: "https://animation-scroll-puce.vercel.app/",
   },
+  // E-Learning
   {
     name: "E-Learning",
     description:
@@ -236,28 +358,7 @@ const projects = [
     source_code_link: "https://github.com/ayman-ezzeldin/E-Learning-App",
     source_demo_link: "https://e-learning-app-six.vercel.app/",
   },
-  {
-    name: "My portfolio",
-    description:
-      "Web application that enables users to see my experience, view Projects  and can contact me.",
-    tags: [
-      {
-        name: "React JS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "three js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: portfolio,
-    source_code_link: "https://github.com/Ayman-ezzeldin/ayman_ezz",
-    source_demo_link: "https://ayman-ezz.vercel.app",
-  },
+  // foodies
   {
     name: "Foodies",
     description:
@@ -280,6 +381,7 @@ const projects = [
     source_code_link: "https://github.com/Ayman-ezzeldin/foodies",
     source_demo_link: "https://foodies-kappa.vercel.app",
   },
+  // tic-tac-toe
   {
     name: "Tic-tac-toe",
     description:
@@ -302,42 +404,7 @@ const projects = [
     source_code_link: "https://github.com/Ayman-ezzeldin/Tic-tac-toe",
     source_demo_link: "https://tic-tac-toe-snowy-theta.vercel.app",
   },
-  {
-    name: "World App",
-    description:
-      "World Application that see some features and animations, you can get it with basics .",
-    tags: [
-      {
-        name: "HTML",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: world,
-    source_code_link: "https://github.com/Ayman-ezzeldin/World-App",
-    source_demo_link: "https://world-app-henna.vercel.app",
-  },
-  {
-    name: "Kapser",
-    description:
-      "Kasper App, Hello WorldWe Are Kasper We Make Art, you can get it.",
-    tags: [
-      {
-        name: "HTML",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: kasper,
-    source_code_link: "https://github.com/Ayman-ezzeldin/kasper",
-    source_demo_link: "https://kasper-bice.vercel.app",
-  },
+  // guess game
   {
     name: "Guess Game",
     description:

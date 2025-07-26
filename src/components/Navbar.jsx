@@ -20,9 +20,13 @@ const Navbar = () => {
   }, [location]);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center bg-bgColor py-5 sticky top-0 z-50  `}
+      className={`${styles.paddingX} w-full flex items-center bg-blur sticky top-0 z-50  `}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div
+        className="w-full flex justify-between items-center max-w-7xl mx-auto 
+          backdrop-blur-md backdrop-saturate-200 rounded-xl shadow-sm px-4 py-3"
+      >
+        {" "}
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -43,7 +47,6 @@ const Navbar = () => {
             Ayman Ezz
           </p>
         </Link>
-
         <ul className="list-none hidden md:flex flex-row gap-10">
           <li>
             <Link
@@ -94,7 +97,6 @@ const Navbar = () => {
             )
           )}
         </ul>
-
         <div className="md:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
