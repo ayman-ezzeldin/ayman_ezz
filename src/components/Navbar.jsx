@@ -48,7 +48,7 @@ const Navbar = () => {
           </p>
         </Link>
         <ul className="list-none hidden md:flex flex-row gap-10">
-          <li>
+          {/* <li>
             <Link
               to="/resume"
               className={`${
@@ -58,8 +58,8 @@ const Navbar = () => {
             >
               Resume
             </Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link
               to="/blog"
               className={`${
@@ -69,7 +69,7 @@ const Navbar = () => {
             >
               Blog
             </Link>
-          </li>
+          </li> */}
           {navLinks.map((link) =>
             location !== "/" ? (
               <li>
@@ -96,6 +96,30 @@ const Navbar = () => {
               </li>
             )
           )}
+
+          <li>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1NqPvbP8HogDtJ-Vugkon4xy9eNgEJRLG"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white flex items-center gap-2 font-semibold"
+              aria-label="Download Resume"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 14.5a1.5 1.5 0 001.5 1.5h11a1.5 1.5 0 001.5-1.5V9a.75.75 0 011.5 0v5.5A3 3 0 0115.5 17h-11a3 3 0 01-3-3V9a.75.75 0 011.5 0v5.5zM10.75 2a.75.75 0 00-1.5 0v7.19l-2.22-2.22a.75.75 0 10-1.06 1.06l3.5 3.5a.75.75 0 001.06 0l3.5-3.5a.75.75 0 10-1.06-1.06l-2.22 2.22V2z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <span>Resume</span>
+            </a>
+          </li>
         </ul>
         <div className="md:hidden flex flex-1 justify-end items-center">
           <img
@@ -112,7 +136,7 @@ const Navbar = () => {
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
-              <li>
+              {/* <li>
                 <Link
                   to="/resume"
                   className={`${
@@ -122,8 +146,8 @@ const Navbar = () => {
                 >
                   Resume
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link
                   to="/blog"
                   className={`${
@@ -133,7 +157,7 @@ const Navbar = () => {
                 >
                   Blog
                 </Link>
-              </li>
+              </li> */}
               {navLinks.map((link) =>
                 location !== "/" ? (
                   <li>
@@ -160,6 +184,30 @@ const Navbar = () => {
                   </li>
                 )
               )}
+
+              <li>
+                <a
+                  href="https://drive.google.com/uc?export=download&id=1NqPvbP8HogDtJ-Vugkon4xy9eNgEJRLG"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white flex items-center gap-2 font-semibold"
+                  aria-label="Download Resume"
+                >
+                  <svg
+                    className="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M3 14.5a1.5 1.5 0 001.5 1.5h11a1.5 1.5 0 001.5-1.5V9a.75.75 0 011.5 0v5.5A3 3 0 0115.5 17h-11a3 3 0 01-3-3V9a.75.75 0 011.5 0v5.5zM10.75 2a.75.75 0 00-1.5 0v7.19l-2.22-2.22a.75.75 0 10-1.06 1.06l3.5 3.5a.75.75 0 001.06 0l3.5-3.5a.75.75 0 10-1.06-1.06l-2.22 2.22V2z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <span>Resume</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

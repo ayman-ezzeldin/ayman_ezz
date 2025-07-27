@@ -18,10 +18,10 @@ import { Toaster } from "react-hot-toast";
 
 const Works = lazy(()=> import("./components/Works"));
 const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
-const Resume = lazy(() => import("./Pages/Resume"));
 const NotFound = lazy(() => import("./Pages/NotFound"));
-const Blog = lazy(() => import("./Pages/Blog"));
-const BlogPost = lazy(() => import("./Pages/BlogPost"));
+// const Resume = lazy(() => import("./Pages/Resume"));
+// const Blog = lazy(() => import("./Pages/Blog"));
+// const BlogPost = lazy(() => import("./Pages/BlogPost"));
 
 function App() {
   const { ref: starsRef, inView: starsVisible } = useInView({
@@ -32,7 +32,7 @@ function App() {
   return (
     <BrowserRouter>
     <Toaster position="bottom-right" />
-      <div className={`relative z-0 bg-bgColor selection:bg-inherit selection:text-primary`}>
+      <div className={`relative z-0 bg-bgColor selection:bg-inherit selection:text-primary  `}>
         <Navbar />
 
         <Suspense fallback={<Loading />}>
@@ -64,9 +64,9 @@ function App() {
               }
             />
 
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogPost />} />
+            {/* <Route path="/resume" element={<Resume />} /> */}
+            {/* <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
