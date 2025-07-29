@@ -2,7 +2,7 @@ import { useEffect, memo, useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import logo from "../assets/logo.webp";
+import logo from "/logo.webp";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
 
@@ -20,10 +20,10 @@ const Navbar = () => {
   }, [location]);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center bg-blur sticky top-0 z-50  `}
+      className={`${styles.paddingX} w-full flex items-center  bg-blur sticky top-0 z-50  `}
     >
       <div
-        className="w-full flex justify-between items-center max-w-7xl mx-auto 
+        className="w-full flex justify-between items-center max-w-7xl mx-auto
           backdrop-blur-md backdrop-saturate-200 rounded-xl shadow-sm px-4 py-3"
       >
         {" "}

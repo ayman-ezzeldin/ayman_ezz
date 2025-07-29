@@ -1,6 +1,6 @@
 import { navLinks } from "../constants";
 import { useState } from "react";
-import logo from "../assets/logo.webp";
+import logo from "/logo.webp";
 import { styles } from "../styles";
 
 const Footer = () => {
