@@ -20,7 +20,7 @@ const Navbar = () => {
   }, [location]);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center  bg-blur sticky top-0 z-50  `}
+      className={`${styles.paddingX} w-full flex items-center backdrop-blur-md backdrop-saturate-200 sticky top-0 z-50  `}
     >
       <div
         className="w-full flex justify-between items-center max-w-7xl mx-auto

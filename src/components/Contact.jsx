@@ -7,8 +7,7 @@ import { slideIn } from "../utils/motion";
 import Loading from "./Loading";
 import toast from "react-hot-toast";
 
-const EarthCanvas = lazy(() =>
-  import("./canvas").then((mod) => ({ default: mod.EarthCanvas }))
+const EarthCanvas = lazy(() => import("./canvas/Earth")
 );
 
 const Contact = () => {
