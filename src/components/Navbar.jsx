@@ -24,7 +24,7 @@ const Navbar = () => {
     >
       <div
         className="w-full flex justify-between items-center max-w-7xl mx-auto
-          backdrop-blur-md backdrop-saturate-200 rounded-xl shadow-sm px-4 py-3"
+          backdrop-blur-md backdrop-saturate-200 rounded-xl shadow-sm md:px-4 py-3"
       >
         {" "}
         <Link
@@ -48,28 +48,7 @@ const Navbar = () => {
           </p>
         </Link>
         <ul className="list-none hidden md:flex flex-row gap-10">
-          {/* <li>
-            <Link
-              to="/resume"
-              className={`${
-                active === "Resume" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer `}
-              onClick={() => setActive("Resume")}
-            >
-              Resume
-            </Link>
-          </li> */}
-          {/* <li>
-            <Link
-              to="/blog"
-              className={`${
-                active === "Blog" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer `}
-              onClick={() => setActive("Blog")}
-            >
-              Blog
-            </Link>
-          </li> */}
+          
           {navLinks.map((link) =>
             location !== "/" ? (
               <li>
@@ -121,6 +100,7 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+        
         <div className="md:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
@@ -136,28 +116,7 @@ const Navbar = () => {
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {/* <li>
-                <Link
-                  to="/resume"
-                  className={`${
-                    active === "Resume" ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => setActive("Resume")}
-                >
-                  Resume
-                </Link>
-              </li> */}
-              {/* <li>
-                <Link
-                  to="/blog"
-                  className={`${
-                    active === "Blog" ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer `}
-                  onClick={() => setActive("Blog")}
-                >
-                  Blog
-                </Link>
-              </li> */}
+              
               {navLinks.map((link) =>
                 location !== "/" ? (
                   <li>

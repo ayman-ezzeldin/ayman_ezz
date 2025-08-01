@@ -1,16 +1,18 @@
 import { useState, useRef, lazy, Suspense } from "react";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import Loading from "./Loading";
 import toast from "react-hot-toast";
+import { useInView } from "react-intersection-observer";
 
-const EarthCanvas = lazy(() => import("./canvas/Earth")
-);
+const EarthCanvas = lazy(() => import("./canvas/Earth"));
 
 const Contact = () => {
+  const [ref, inView] = useInView({ triggerOnce: true });
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -30,7 +32,7 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_xesepsi",
+        "service_xw5toza",
         "template_5krcean",
         {
           from_name: form.name,
@@ -124,16 +126,18 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-        
       </motion.div>
 
       <motion.div
+        ref={ref}
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        <Suspense fallback={<Loading />}>
-          <EarthCanvas />
-        </Suspense>
+        {inView && (
+          <Suspense fallback={<Loading />}>
+            <EarthCanvas />
+          </Suspense>
+        )}
       </motion.div>
     </div>
   );
