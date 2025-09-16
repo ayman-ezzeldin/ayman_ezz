@@ -24,6 +24,8 @@ import kasper from '../assets/kasper.jpg'
 import guessGame from '../assets/guessGame.jpg'
 import depi from '../assets/depiEN.webp'
 import engZag from '../assets/engZag.webp'
+import weather from '../assets/weather.webp'
+import hala from '../assets/hala.webp'
 
 export const navLinks = [
   {
@@ -169,6 +171,27 @@ const testimonials = [
 
 const projects = [
 
+  // Hala
+  {
+    name: "Hala Hotel",
+    description:"Hala Hotel is a leading hotel chain in Saud Arabia, known for its luxurious accommodations, exceptional services, and exceptional experiences.",
+    tags: [
+      {
+        name: "Next JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Shadcn UI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "i18next",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: hala,
+    source_demo_link: "https://hala-hotel-lemon.vercel.app/en",
+  },
   // mff store
   {
     name: "MFF Store",
@@ -330,6 +353,29 @@ const projects = [
     image: animation,
     source_code_link: "https://github.com/Ayman-ezzeldin/Animation",
     source_demo_link: "https://animation-scroll-puce.vercel.app/",
+  },
+  // Weather
+  {
+    name: "Weather App",
+    description:
+      "Just simple weather app, to know my current weather.",
+    tags: [
+      {
+        name: "Next JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Shadcn UI",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Dark Mode",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: weather,
+    source_code_link: "https://github.com/Ayman-ezzeldin/weather-app",
+    source_demo_link: "https://weather-app-sable-ten-91.vercel.app/en",
   },
   // E-Learning
   {
