@@ -143,10 +143,9 @@ const Navbar = () => {
                   </li>
                 )
               )}
-
               <li>
                 <a
-                  href="https://drive.google.com/uc?export=download&id=1NqPvbP8HogDtJ-Vugkon4xy9eNgEJRLG"
+                  href="https://drive.google.com/uc?export=download&id=1wQNjPg0Uj8u7NtEwNzJDJMlq9eo-sF_S"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white flex items-center gap-2 font-semibold"
                   aria-label="Download Resume"
