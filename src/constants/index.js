@@ -26,6 +26,7 @@ import depi from '../assets/depiEN.webp'
 import engZag from '../assets/engZag.webp'
 import weather from '../assets/weather.webp'
 import hala from '../assets/hala.webp'
+import dokkan from '../assets/dokkan.webp'
 
 export const navLinks = [
   {
@@ -191,6 +192,27 @@ const projects = [
     ],
     image: hala,
     source_demo_link: "https://hala-hotel-lemon.vercel.app/en",
+  },
+  // Dokkan
+  {
+    name: "Al_Dokkan",
+    description:"Al Dokkan is a leading online marketplace in Egypt, offering a wide range of Books and services for individuals and businesses.",
+    tags: [
+      {
+        name: "Next JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Express",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: dokkan,
+    source_demo_link: "https://dokkan-two.vercel.app/en",
   },
   // mff store
   {
