@@ -1,4 +1,3 @@
-
 import {
   creator,
   web,
@@ -9,24 +8,24 @@ import {
   nextJs,
 } from "../assets";
 
-import mffstore from '../assets/mffstore.webp'
-import aino from '../assets/AINO.webp'
-import alhelal from '../assets/alhelal.webp'
+import mffstore from "../assets/mffstore.webp";
+import aino from "../assets/AINO.webp";
+import alhelal from "../assets/alhelal.webp";
 import zageng from "../assets/zageng.jpg";
-import portfolio from '../assets/portfolio.webp'
-import eLearning from '../assets/eLearning.jpg'
-import gdsc from '../assets/gdsc.jpg'
-import animation from '../assets/animation.webp'
-import foodies from '../assets/foodies.jpg'
-import tic from '../assets/tic.jpg'
-import world from '../assets/world.jpg'
-import kasper from '../assets/kasper.jpg'
-import guessGame from '../assets/guessGame.jpg'
-import depi from '../assets/depiEN.webp'
-import engZag from '../assets/engZag.webp'
-import weather from '../assets/weather.webp'
-import hala from '../assets/hala.webp'
-import dokkan from '../assets/dokkan.webp'
+import portfolio from "../assets/portfolio.webp";
+import eLearning from "../assets/eLearning.jpg";
+import gdsc from "../assets/gdsc.jpg";
+import animation from "../assets/animation.webp";
+import foodies from "../assets/foodies.jpg";
+import tic from "../assets/tic.jpg";
+import world from "../assets/world.jpg";
+import kasper from "../assets/kasper.jpg";
+import guessGame from "../assets/guessGame.jpg";
+import depi from "../assets/depiEN.webp";
+import engZag from "../assets/engZag.webp";
+import weather from "../assets/weather.webp";
+import hala from "../assets/hala.webp";
+import dokkan from "../assets/dokkan.webp";
 
 export const navLinks = [
   {
@@ -45,17 +44,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Frontend Development",
+    icon: reactjs,
   },
   {
-    title: "Frontend Developer",
+    title: "UI/UX Design",
     icon: creator,
+  },
+  {
+    title: "Backend Development",
+    icon: web,
   },
 ];
 
 const technologies = [
-  
   {
     name: "JavaScript",
     icon: javascript,
@@ -82,13 +84,13 @@ const experiences = [
   {
     title: "Full Stack Developer Trainee",
     company_name: "Digital Egypt Pioneers Initiative (DEPI)",
-    icon: depi, 
+    icon: depi,
     iconBg: "#fff",
     date: "May 2024 – November 2024",
     points: [
       "Undergoing intensive hands-on training in full stack web development.",
       "Learning advanced frontend and backend technologies, deployment, and best practices.",
-      "Participating in real-world projects and collaborative development teams."
+      "Participating in real-world projects and collaborative development teams.",
     ],
   },
   {
@@ -101,7 +103,7 @@ const experiences = [
       "Developed and maintained 15+ web applications using React.js and Next.js.",
       "Focused on building responsive, high-performance UIs with attention to user experience and design consistency.",
       "Collaborated with designers and team members to deliver clean, scalable code and reusable components.",
-      "Reviewed code, shared feedback, and contributed to overall code quality and team growth."
+      "Reviewed code, shared feedback, and contributed to overall code quality and team growth.",
     ],
   },
   {
@@ -109,24 +111,24 @@ const experiences = [
     company_name: "GDG On Campus ZAG",
     icon: gdsc,
     iconBg: "#fff",
-    date: "October 2023 – Present",
+    date: "October 2023 – September 2025",
     points: [
       "Guided the frontend team within the GDG core team, overseeing project workflows and timelines.",
       "Improved team coordination and collaboration across different roles.",
       "Supported junior developers through mentorship and hands-on code reviews.",
-      "Helped deliver production-level community-driven web projects."
+      "Helped deliver production-level community-driven web projects.",
     ],
   },
   {
     title: "Zag-Eng Member",
     company_name: "Zag-Eng",
-    icon: zageng, // replace with your Zag-Eng icon
+    icon: zageng,
     iconBg: "#fff",
     date: "December 2022 – July 2023",
     points: [
       "Sharpened technical skills through online self-study, interactive learning modules, and peer collaboration.",
       "Completed practical assignments and contributed to technical discussions with peers and instructors.",
-      "Built a strong foundation in frontend development and web fundamentals."
+      "Built a strong foundation in frontend development and web fundamentals.",
     ],
   },
   {
@@ -137,11 +139,10 @@ const experiences = [
     date: "October 2020 – July 2025",
     points: [
       "Studied core engineering and computer science subjects including data structures, algorithms, and software engineering.",
-      "Engaged in academic projects and student tech activities across the years."
+      "Engaged in academic projects and student tech activities across the years.",
     ],
-  }
+  },
 ];
-
 
 const testimonials = [
   {
@@ -171,11 +172,12 @@ const testimonials = [
 ];
 
 const projects = [
-
   // Hala
   {
     name: "Hala Hotel",
-    description:"Hala Hotel is a leading hotel chain in Saud Arabia, known for its luxurious accommodations, exceptional services, and exceptional experiences.",
+    category: "Frontend",
+    description:
+      "Hala Hotel is a leading hotel chain in Saud Arabia, known for its luxurious accommodations, exceptional services, and exceptional experiences.",
     tags: [
       {
         name: "Next JS",
@@ -196,7 +198,9 @@ const projects = [
   // Dokkan
   {
     name: "Al_Dokkan",
-    description:"Al Dokkan is a leading online marketplace in Egypt, offering a wide range of Books and services for individuals and businesses.",
+    category: "Backend",
+    description:
+      "Al Dokkan is a leading online marketplace in Egypt, offering a wide range of Books and services for individuals and businesses.",
     tags: [
       {
         name: "Next JS",
@@ -217,14 +221,16 @@ const projects = [
   // mff store
   {
     name: "MFF Store",
-    description:"MFF Systems is a fire safety and security e-commerce platform offering alarms, extinguishers, CCTV systems, and professional installation services.",
+    category: "Frontend",
+    description:
+      "MFF Systems is a fire safety and security e-commerce platform offering alarms, extinguishers, CCTV systems, and professional installation services.",
     tags: [
       {
         name: "React JS",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Tailwind",
         color: "blue-text-gradient",
       },
     ],
@@ -234,14 +240,16 @@ const projects = [
   // aino
   {
     name: "AINO",
-    description:"Built with modern AI capabilities, it allows users to generate, design, and preview outputs instantly from prompts as an interactive web app.",
+    category: "UI",
+    description:
+      "Built with modern AI capabilities, it allows users to generate, design, and preview outputs instantly from prompts as an interactive web app.",
     tags: [
       {
         name: "React JS",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Tailwind",
         color: "blue-text-gradient",
       },
       {
@@ -255,36 +263,39 @@ const projects = [
   // alhelal systems
   {
     name: "Alhelal Systems",
-    description:"Al Helal Systems is a leading Egyptian company specializing in fire alarms, firefighting, and security systems. With over 9 years of experience, we have served more than 800 clients across Egypt, providing top-notch design, installation, and maintenance services.",
-      tags: [
+    category: "Frontend",
+    description:
+      "Al Helal Systems is a leading Egyptian company specializing in fire alarms, firefighting, and security systems. With over 9 years of experience, we have served more than 800 clients across Egypt, providing top-notch design, installation, and maintenance services.",
+    tags: [
       {
         name: "Next JS",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Tailwind",
         color: "blue-text-gradient",
       },
     ],
     image: alhelal,
     source_demo_link: "https://alhelalsystems.com/en",
   },
-   // portfolio
+  // portfolio
   {
     name: "My portfolio",
+    category: "Frontend",
     description:
-      "Web application that enables users to see my experience, view Projects  and can contact me.",
+      "A modern and interactive portfolio web application built with React and Three.js, showcasing my professional experience, technical skills, and project portfolio. Features include smooth animations, 3D visualizations, responsive design, and an integrated contact form for seamless communication.",
     tags: [
       {
         name: "React JS",
         color: "green-text-gradient",
       },
       {
-        name: "three js",
+        name: "Three js",
         color: "pink-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Tailwind",
         color: "blue-text-gradient",
       },
     ],
@@ -295,15 +306,16 @@ const projects = [
   // world app
   {
     name: "World App",
+    category: "Frontend",
     description:
-      "World Application that see some features and animations, you can get it with basics .",
+      "A responsive web application showcasing various interactive features and smooth animations. Built with HTML and CSS, this project demonstrates modern web design principles, including scroll animations, hover effects, and dynamic content presentation for an engaging user experience.",
     tags: [
       {
         name: "HTML",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "CSS",
         color: "blue-text-gradient",
       },
     ],
@@ -314,15 +326,16 @@ const projects = [
   // kasper
   {
     name: "Kapser",
+    category: "UI",
     description:
-      "Kasper App, Hello WorldWe Are Kasper We Make Art, you can get it.",
+      "Kasper is a creative design showcase website featuring modern UI/UX design principles. Built with HTML and CSS, this project demonstrates clean layouts, artistic typography, smooth transitions, and responsive design techniques for presenting creative work and services.",
     tags: [
       {
         name: "HTML",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "CSS",
         color: "blue-text-gradient",
       },
     ],
@@ -333,6 +346,7 @@ const projects = [
   // zag family
   {
     name: "Zag Family",
+    category: "Frontend",
     description:
       "Web-based platform that allows users to search, and manage data from various providers, providing a convenient and efficient solution for students and needs.",
     tags: [
@@ -341,7 +355,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Tailwind",
         color: "blue-text-gradient",
       },
       {
@@ -356,8 +370,9 @@ const projects = [
   // Animation
   {
     name: "Animation",
+    category: "UI",
     description:
-      "Web application that enables you to try different animations like scroll, modal view and more.",
+      "An interactive web application built with React.js and Motion UI, showcasing various animation techniques including smooth scroll animations, modal transitions, hover effects, and dynamic content reveals. This project demonstrates modern animation libraries and CSS transitions for creating engaging user interfaces.",
     tags: [
       {
         name: "React JS",
@@ -368,7 +383,7 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Tailwind",
         color: "blue-text-gradient",
       },
     ],
@@ -379,8 +394,9 @@ const projects = [
   // Weather
   {
     name: "Weather App",
+    category: "Frontend",
     description:
-      "Just simple weather app, to know my current weather.",
+      "A modern weather application built with Next.js and Shadcn UI that provides real-time weather information for any location. Features include dark mode support, responsive design, location-based weather data, and an intuitive user interface for checking current weather conditions and forecasts.",
     tags: [
       {
         name: "Next JS",
@@ -402,8 +418,9 @@ const projects = [
   // E-Learning
   {
     name: "E-Learning",
+    category: "Frontend",
     description:
-    "A comprehensive Education booking platform that allows users to book courses in various subjects, including front-end, back-end, data science and offers curated recommendations for popular courses.",
+      "A comprehensive Education booking platform that allows users to book courses in various subjects, including front-end, back-end, data science and offers curated recommendations for popular courses.",
     tags: [
       {
         name: "React JS",
@@ -429,8 +446,9 @@ const projects = [
   // foodies
   {
     name: "Foodies",
+    category: "Backend",
     description:
-      "Web application that enables users to see meals, view varient of food  and can share you own meal.",
+      "A full-stack food sharing platform built with Next.js and database integration, allowing users to browse various meal options, view different food variants, and share their own culinary creations. Features include user authentication, meal posting, search functionality, and interactive food discovery.",
     tags: [
       {
         name: "Next JS",
@@ -441,7 +459,7 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Tailwind",
         color: "blue-text-gradient",
       },
     ],
@@ -452,8 +470,9 @@ const projects = [
   // tic-tac-toe
   {
     name: "Tic-tac-toe",
+    category: "Frontend",
     description:
-      "Web application that enables two users to play tic-tac-toe game, see who is the winner.",
+      "An interactive tic-tac-toe game built with React.js, featuring real-time game state management, turn-based gameplay, and winner detection. The application provides a smooth user experience with responsive design, game reset functionality, and visual feedback for player moves and game outcomes.",
     tags: [
       {
         name: "React JS",
@@ -464,7 +483,7 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "css",
+        name: "CSS",
         color: "blue-text-gradient",
       },
     ],
@@ -475,15 +494,16 @@ const projects = [
   // guess game
   {
     name: "Guess Game",
+    category: "Frontend",
     description:
-      "Guess Game, Guess The Word and win the game, then you get your points.",
+      "An engaging word guessing game built with HTML, CSS, and JavaScript, where players attempt to guess words to earn points. Features include dynamic word generation, scoring system, game difficulty levels, and interactive feedback to enhance the gaming experience and challenge players' vocabulary skills.",
     tags: [
       {
         name: "HTML",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "CSS",
         color: "blue-text-gradient",
       },
       {
@@ -495,7 +515,6 @@ const projects = [
     source_code_link: "https://github.com/Ayman-ezzeldin/guess-the-word",
     source_demo_link: "https://guess-the-word-chi.vercel.app",
   },
-
 ];
 
 export { services, technologies, experiences, testimonials, projects };

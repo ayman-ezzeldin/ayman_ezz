@@ -6,9 +6,27 @@ import { styles } from "../styles";
 import { lazy, Suspense } from "react";
 import Loading from "./Loading";
 
-const ProjectCard = lazy(() => import("./ProjectCard"));
+const ProjectCarousel = lazy(() => import("./ProjectCarousel"));
 
 const Works = () => {
+  const categories = ["Frontend", "UI", "Backend"];
+
+  const getProjectsByCategory = (category) => {
+    return projects.filter((project) => project.category === category);
+  };
+
+  const getUniqueTags = (categoryProjects) => {
+    const allTags = categoryProjects.flatMap((project) => project.tags);
+    const uniqueTagsMap = new Map();
+    allTags.forEach((tag) => {
+      const normalizedName = tag.name.trim().toLowerCase();
+      if (!uniqueTagsMap.has(normalizedName)) {
+        uniqueTagsMap.set(normalizedName, tag);
+      }
+    });
+    return Array.from(uniqueTagsMap.values());
+  };
+
   return (
     <>
       <motion.div id="about" variants={textVariant()}>
@@ -34,12 +52,47 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className=" mt-5 md:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-        <Suspense fallback={<Loading />}>
-          {projects.map((project, index) => (
-            <ProjectCard key={`project-${index}`} index={index} {...project} />
-          ))}
-        </Suspense>
+      <div className="mt-10 md:mt-20 space-y-16">
+        {categories.map((category) => {
+          const categoryProjects = getProjectsByCategory(category);
+          const uniqueTags = getUniqueTags(categoryProjects);
+
+          if (categoryProjects.length === 0) return null;
+
+          return (
+            <motion.div
+              key={category}
+              variants={fadeIn("up", "spring", 0.1, 0.75)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.25 }}
+            >
+              <h3 className="text-white text-[32px] md:text-[40px] font-bold mb-4">
+                {category}
+              </h3>
+
+              {uniqueTags.length > 0 && (
+                <div className="mb-6 flex flex-wrap gap-3">
+                  {uniqueTags.map((tag) => (
+                    <span
+                      key={tag.name}
+                      className={`text-[14px] ${tag.color} px-3 py-1 rounded-full bg-tertiary/50`}
+                    >
+                      #{tag.name}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              <Suspense fallback={<Loading />}>
+                <ProjectCarousel
+                  projects={categoryProjects}
+                  category={category}
+                />
+              </Suspense>
+            </motion.div>
+          );
+        })}
       </div>
     </>
   );

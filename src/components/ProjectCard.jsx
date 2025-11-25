@@ -14,10 +14,10 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.2, 0.4)}
+      variants={fadeIn("up", "spring", index * 0.05, 0.3)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.05 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       <Tilt
         options={{
@@ -25,9 +25,9 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary w-full h-full p-5 rounded-2xl"
+        className="bg-tertiary w-full h-full p-5 rounded-2xl flex flex-col"
       >
-        <div className="relative w-full h-[230px]">
+        <div className="relative w-full h-[280px] flex-shrink-0">
           <img
             loading="lazy"
             src={image}
@@ -64,22 +64,22 @@ const ProjectCard = ({
           </div>
         </div>
 
-          <div className="mt-5 flex flex-col justify-between ">
-            <h3 className="text-white font-bold text-[24px]">{name}</h3>
-            <p className="mt-2 text-secondary text-ellipsis overflow-hidden h-25 text-[14px]">
-              {description}
-            </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {tags.map((tag) => (
-                  <p
-                    key={`${name}-${tag.name}`}
-                    className={`text-[14px] ${tag.color}`}
-                  >
-                    #{tag.name}
-                  </p>
-                ))}
-              </div>
+        <div className="mt-5 flex flex-col justify-between flex-1 min-h-0">
+          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          <p className="mt-2 text-secondary text-[14px] line-clamp-3">
+            {description}
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <p
+                key={`${name}-${tag.name}`}
+                className={`text-[14px] ${tag.color}`}
+              >
+                #{tag.name}
+              </p>
+            ))}
           </div>
+        </div>
       </Tilt>
     </motion.div>
   );
