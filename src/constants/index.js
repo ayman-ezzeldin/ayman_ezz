@@ -26,6 +26,7 @@ import engZag from "../assets/engZag.webp";
 import weather from "../assets/weather.webp";
 import hala from "../assets/hala.webp";
 import dokkan from "../assets/dokkan.webp";
+import nodeJsCourse from "../assets/nodeJsCourse.webp";
 
 export const navLinks = [
   {
@@ -171,11 +172,10 @@ const testimonials = [
   },
 ];
 
-const projects = [
+const frontend_projects = [
   // Hala
   {
     name: "Hala Hotel",
-    category: "Frontend",
     description:
       "Hala Hotel is a leading hotel chain in Saud Arabia, known for its luxurious accommodations, exceptional services, and exceptional experiences.",
     tags: [
@@ -198,7 +198,6 @@ const projects = [
   // Dokkan
   {
     name: "Al_Dokkan",
-    category: "Backend",
     description:
       "Al Dokkan is a leading online marketplace in Egypt, offering a wide range of Books and services for individuals and businesses.",
     tags: [
@@ -221,7 +220,6 @@ const projects = [
   // mff store
   {
     name: "MFF Store",
-    category: "Frontend",
     description:
       "MFF Systems is a fire safety and security e-commerce platform offering alarms, extinguishers, CCTV systems, and professional installation services.",
     tags: [
@@ -240,7 +238,6 @@ const projects = [
   // aino
   {
     name: "AINO",
-    category: "UI",
     description:
       "Built with modern AI capabilities, it allows users to generate, design, and preview outputs instantly from prompts as an interactive web app.",
     tags: [
@@ -263,7 +260,6 @@ const projects = [
   // alhelal systems
   {
     name: "Alhelal Systems",
-    category: "Frontend",
     description:
       "Al Helal Systems is a leading Egyptian company specializing in fire alarms, firefighting, and security systems. With over 9 years of experience, we have served more than 800 clients across Egypt, providing top-notch design, installation, and maintenance services.",
     tags: [
@@ -282,7 +278,6 @@ const projects = [
   // portfolio
   {
     name: "My portfolio",
-    category: "Frontend",
     description:
       "A modern and interactive portfolio web application built with React and Three.js, showcasing my professional experience, technical skills, and project portfolio. Features include smooth animations, 3D visualizations, responsive design, and an integrated contact form for seamless communication.",
     tags: [
@@ -306,7 +301,6 @@ const projects = [
   // world app
   {
     name: "World App",
-    category: "Frontend",
     description:
       "A responsive web application showcasing various interactive features and smooth animations. Built with HTML and CSS, this project demonstrates modern web design principles, including scroll animations, hover effects, and dynamic content presentation for an engaging user experience.",
     tags: [
@@ -326,7 +320,6 @@ const projects = [
   // kasper
   {
     name: "Kapser",
-    category: "UI",
     description:
       "Kasper is a creative design showcase website featuring modern UI/UX design principles. Built with HTML and CSS, this project demonstrates clean layouts, artistic typography, smooth transitions, and responsive design techniques for presenting creative work and services.",
     tags: [
@@ -346,7 +339,6 @@ const projects = [
   // zag family
   {
     name: "Zag Family",
-    category: "Frontend",
     description:
       "Web-based platform that allows users to search, and manage data from various providers, providing a convenient and efficient solution for students and needs.",
     tags: [
@@ -370,7 +362,6 @@ const projects = [
   // Animation
   {
     name: "Animation",
-    category: "UI",
     description:
       "An interactive web application built with React.js and Motion UI, showcasing various animation techniques including smooth scroll animations, modal transitions, hover effects, and dynamic content reveals. This project demonstrates modern animation libraries and CSS transitions for creating engaging user interfaces.",
     tags: [
@@ -394,7 +385,6 @@ const projects = [
   // Weather
   {
     name: "Weather App",
-    category: "Frontend",
     description:
       "A modern weather application built with Next.js and Shadcn UI that provides real-time weather information for any location. Features include dark mode support, responsive design, location-based weather data, and an intuitive user interface for checking current weather conditions and forecasts.",
     tags: [
@@ -418,7 +408,6 @@ const projects = [
   // E-Learning
   {
     name: "E-Learning",
-    category: "Frontend",
     description:
       "A comprehensive Education booking platform that allows users to book courses in various subjects, including front-end, back-end, data science and offers curated recommendations for popular courses.",
     tags: [
@@ -446,7 +435,6 @@ const projects = [
   // foodies
   {
     name: "Foodies",
-    category: "Backend",
     description:
       "A full-stack food sharing platform built with Next.js and database integration, allowing users to browse various meal options, view different food variants, and share their own culinary creations. Features include user authentication, meal posting, search functionality, and interactive food discovery.",
     tags: [
@@ -470,7 +458,6 @@ const projects = [
   // tic-tac-toe
   {
     name: "Tic-tac-toe",
-    category: "Frontend",
     description:
       "An interactive tic-tac-toe game built with React.js, featuring real-time game state management, turn-based gameplay, and winner detection. The application provides a smooth user experience with responsive design, game reset functionality, and visual feedback for player moves and game outcomes.",
     tags: [
@@ -494,7 +481,6 @@ const projects = [
   // guess game
   {
     name: "Guess Game",
-    category: "Frontend",
     description:
       "An engaging word guessing game built with HTML, CSS, and JavaScript, where players attempt to guess words to earn points. Features include dynamic word generation, scoring system, game difficulty levels, and interactive feedback to enhance the gaming experience and challenge players' vocabulary skills.",
     tags: [
@@ -517,4 +503,55 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const backend_projects = [
+  // Hala
+  {
+    name: "Courses Management System",
+    description:
+      "A small project that simulates a courses management system built with Node.js and Express, allowing admin to manage courses and students",
+    tags: [
+      {
+        name: "Node.js",
+        color: "text-green-600",
+      },
+      {
+        name: "Express",
+        color: "text-blue-600",
+      },
+      {
+        name: "MongoDB",
+        color: "text-pink-600",
+      },
+    ],
+    image: nodeJsCourse,
+    source_code_link:
+      "https://github.com/ayman-ezzeldin/backend/tree/main/session%205",
+  },
+];
+
+const ui_projects = [
+  // Dokkan
+  {
+    name: "Al_Dokkan",
+    description:
+      "Al Dokkan is a leading online marketplace in Egypt, offering a wide range of Books and services for individuals and businesses.",
+    tags: [
+      {
+        name: "Figma",
+        color: "text-blue-600",
+      },
+    ],
+    image: dokkan,
+    source_demo_link:
+      "https://www.figma.com/design/6wJ4zcElWQa47MGtFaMH63/My-designs?node-id=0-1",
+  },
+];
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  frontend_projects,
+  backend_projects,
+  ui_projects,
+};

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
+import { frontend_projects, backend_projects, ui_projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { lazy, Suspense } from "react";
@@ -9,14 +9,14 @@ import Loading from "./Loading";
 const ProjectCarousel = lazy(() => import("./ProjectCarousel"));
 
 const Works = () => {
-  const categories = ["Frontend", "UI", "Backend"];
+  const projectArrays = [
+    { name: "Frontend", projects: frontend_projects },
+    { name: "Backend", projects: backend_projects },
+    { name: "UI", projects: ui_projects },
+  ];
 
-  const getProjectsByCategory = (category) => {
-    return projects.filter((project) => project.category === category);
-  };
-
-  const getUniqueTags = (categoryProjects) => {
-    const allTags = categoryProjects.flatMap((project) => project.tags);
+  const getUniqueTags = (projects) => {
+    const allTags = projects.flatMap((project) => project.tags);
     const uniqueTagsMap = new Map();
     allTags.forEach((tag) => {
       const normalizedName = tag.name.trim().toLowerCase();
@@ -53,22 +53,21 @@ const Works = () => {
       </div>
 
       <div className="mt-10 md:mt-20 space-y-16">
-        {categories.map((category) => {
-          const categoryProjects = getProjectsByCategory(category);
-          const uniqueTags = getUniqueTags(categoryProjects);
+        {projectArrays.map(({ name, projects }) => {
+          const uniqueTags = getUniqueTags(projects);
 
-          if (categoryProjects.length === 0) return null;
+          if (projects.length === 0) return null;
 
           return (
             <motion.div
-              key={category}
+              key={name}
               variants={fadeIn("up", "spring", 0.1, 0.75)}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.25 }}
             >
               <h3 className="text-white text-[32px] md:text-[40px] font-bold mb-4">
-                {category}
+                {name}
               </h3>
 
               {uniqueTags.length > 0 && (
@@ -85,10 +84,7 @@ const Works = () => {
               )}
 
               <Suspense fallback={<Loading />}>
-                <ProjectCarousel
-                  projects={categoryProjects}
-                  category={category}
-                />
+                <ProjectCarousel projects={projects} category={name} />
               </Suspense>
             </motion.div>
           );

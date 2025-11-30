@@ -25,7 +25,7 @@ const ProjectCarousel = ({ projects, category }) => {
       const cardWidth = isMobile ? 350 : 400;
       const gap = 28;
       const scrollAmount = cardWidth + gap;
-      
+
       const newScrollLeft =
         scrollRef.current.scrollLeft +
         (direction === "left" ? -scrollAmount : scrollAmount);
@@ -92,7 +92,7 @@ const ProjectCarousel = ({ projects, category }) => {
     >
       <div
         ref={scrollRef}
-        className="flex gap-7 overflow-x-auto scroll-smooth scrollbar-hide"
+        className="flex gap-7 overflow-x-auto scroll-smooth scrollbar-hide items-start"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
@@ -158,4 +158,3 @@ const ProjectCarousel = ({ projects, category }) => {
 };
 
 export default ProjectCarousel;
-
