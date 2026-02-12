@@ -8,8 +8,6 @@ const ProjectCarousel = ({ projects, category }) => {
   const scrollRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
-  const autoScrollIntervalRef = useRef(null);
-  const isHoveredRef = useRef(false);
 
   const checkScrollButtons = () => {
     if (scrollRef.current) {
@@ -45,51 +43,15 @@ const ProjectCarousel = ({ projects, category }) => {
       scrollElement.addEventListener("scroll", handleScroll);
       window.addEventListener("resize", handleScroll);
 
-      const startAutoScroll = () => {
-        if (autoScrollIntervalRef.current) {
-          clearInterval(autoScrollIntervalRef.current);
-        }
-        autoScrollIntervalRef.current = setInterval(() => {
-          if (scrollElement && !isHoveredRef.current) {
-            const { scrollLeft, scrollWidth, clientWidth } = scrollElement;
-            if (scrollLeft >= scrollWidth - clientWidth - 10) {
-              scrollElement.scrollTo({ left: 0, behavior: "smooth" });
-            } else {
-              const isMobile = window.innerWidth < 768;
-              const cardWidth = isMobile ? 350 : 400;
-              const gap = 28;
-              const scrollAmount = cardWidth + gap;
-              scrollElement.scrollTo({
-                left: scrollLeft + scrollAmount,
-                behavior: "smooth",
-              });
-            }
-          }
-        }, 3000);
-      };
-
-      startAutoScroll();
-
       return () => {
         scrollElement.removeEventListener("scroll", handleScroll);
         window.removeEventListener("resize", handleScroll);
-        if (autoScrollIntervalRef.current) {
-          clearInterval(autoScrollIntervalRef.current);
-        }
       };
     }
   }, [projects]);
 
   return (
-    <div
-      className="relative w-full mt-8"
-      onMouseEnter={() => {
-        isHoveredRef.current = true;
-      }}
-      onMouseLeave={() => {
-        isHoveredRef.current = false;
-      }}
-    >
+    <div className="relative w-full mt-8">
       <div
         ref={scrollRef}
         className="flex gap-7 overflow-x-auto scroll-smooth scrollbar-hide items-start"

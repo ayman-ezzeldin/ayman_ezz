@@ -27,6 +27,7 @@ import weather from "../assets/weather.webp";
 import hala from "../assets/hala.webp";
 import dokkan from "../assets/dokkan.webp";
 import nodeJsCourse from "../assets/nodeJsCourse.webp";
+import lumina from "../assets/lumina.webp";
 
 export const navLinks = [
   {
@@ -173,6 +174,28 @@ const testimonials = [
 ];
 
 const frontend_projects = [
+  // Lumina
+  {
+    name: "Lumina Media Agency",
+    description:
+      "an advertising agency specializing in providing creative and comprehensive solutions in the field of advertising and marketing.",
+    tags: [
+      {
+        name: "Next JS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Shadcn UI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Google sheets",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: lumina,
+    source_demo_link: "https://luminamedia.agency",
+  },
   // Hala
   {
     name: "Hala Hotel",
@@ -504,7 +527,6 @@ const frontend_projects = [
 ];
 
 const backend_projects = [
-  // Hala
   {
     name: "Courses Management System",
     description:
