@@ -2,6 +2,7 @@ import { navLinks } from "../constants";
 import { useState } from "react";
 import logo from "/logo.webp";
 import { styles } from "../styles";
+import { Link } from "react-router-dom"; // أو استخدم <a> عادي لو لم تكن تستخدم react-router-dom
 
 const Footer = () => {
   const [active, setActive] = useState("");
@@ -29,7 +30,7 @@ const Footer = () => {
           >
             <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
               <svg
-                aria-label="الاتصال عبر البريد الالكتروني  aymanmae12@gmail.com"
+                aria-label="الاتصال عبر البريد الالكتروني aymanmae12@gmail.com"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
@@ -62,6 +63,7 @@ const Footer = () => {
           </a>
         </p>
 
+        {/* Social Icons */}
         <ul className="mt-6 flex justify-center items-center gap-6 md:gap-8">
           <li>
             <a
@@ -173,7 +175,8 @@ const Footer = () => {
           </li>
         </ul>
 
-        <ul className="mt-12 sm:flex flex-wrap justify-center list-none hidden  gap-6 md:gap-8 lg:gap-12">
+        {/* Navigation Links */}
+        <ul className="mt-12 sm:flex flex-wrap justify-center list-none hidden gap-6 md:gap-8 lg:gap-12">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -186,6 +189,19 @@ const Footer = () => {
             </li>
           ))}
         </ul>
+
+        {/* Bottom Section: Privacy Policy & Copyright */}
+        <div className="mt-12 pt-8 border-t border-gray-800 text-center flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+          <p>
+            © {new Date().getFullYear()} Ayman M Ezzeldin. All rights reserved.
+          </p>
+          <Link
+            to="/privacy"
+            className="hover:text-white transition-colors underline underline-offset-4"
+          >
+            Privacy Policy
+          </Link>
+        </div>
       </div>
     </footer>
   );

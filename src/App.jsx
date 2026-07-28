@@ -12,6 +12,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import { Toaster } from "react-hot-toast";
+import Privacy from "./Pages/privacy";
 
 const Works = lazy(() => import("./components/Works"));
 const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
@@ -54,6 +55,7 @@ function App() {
                 </>
               }
             />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
