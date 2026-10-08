@@ -10,6 +10,7 @@ import Resume from "./Resume";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+
   const location = window.location.pathname;
 
   useEffect(() => {
@@ -19,116 +20,193 @@ const Navbar = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
   return (
-    <nav
-      className={`${styles.paddingX} w-full flex items-center backdrop-blur-md backdrop-saturate-200 sticky top-0 z-50  `}
-    >
+    <nav className={`${styles.paddingX} sticky top-0 z-50 w-full`}>
       <div
-        className="w-full flex justify-between items-center max-w-7xl mx-auto
-          backdrop-blur-md backdrop-saturate-200 rounded-xl shadow-sm md:px-4 py-3"
+        className="
+          mx-auto flex w-full max-w-7xl items-center justify-between
+          rounded-2xl
+          border border-white/[0.08]
+          bg-bgColor/70
+          px-4 py-2
+          backdrop-blur-xl
+          md:px-5
+        "
       >
-        {" "}
+        {/* Logo */}
         <Link
           to="/"
           className="flex items-center gap-2"
           onClick={() => {
             setActive("");
+            setToggle(false);
             window.scrollTo(0, 0);
           }}
         >
           <img
             loading="lazy"
             src={logo}
-            alt="logo"
-            className="w-12 h-12 object-contain aspect-square"
+            alt="Ayman Ezz logo"
+            className="h-11 w-11 object-contain"
           />
+
           <p
-            className={`text-[18px] ${styles.gridentText} font-bold cursor-pointer flex `}
+            className={`
+              ${styles.gridentText}
+              cursor-pointer text-[18px] font-bold
+            `}
           >
             Ayman Ezz
           </p>
         </Link>
-        <ul className="list-none hidden md:flex flex-row gap-10">
-          
-          {navLinks.map((link) =>
-            location !== "/" ? (
-              <li>
-                <Link
-                  to={`/`}
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer`}
-                  onClick={() => setActive(link.title)}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </Link>
+
+        {/* Desktop Navigation */}
+        <ul className="hidden items-center gap-8 md:flex">
+          {navLinks.map((link) => {
+            const isActive = active === link.title;
+
+            return (
+              <li key={link.id}>
+                {location !== "/" ? (
+                  <Link
+                    to={`/#${link.id}`}
+                    onClick={() => setActive(link.title)}
+                    className={`
+                      relative block py-2 text-[16px] font-medium
+                      transition-colors duration-200
+                      ${
+                        isActive
+                          ? "text-white"
+                          : "text-secondary hover:text-white"
+                      }
+                    `}
+                  >
+                    {link.title}
+
+                    {isActive && (
+                      <span className="absolute -bottom-1 left-1/2 h-0.5 w-5 -translate-x-1/2 rounded-full bg-primary" />
+                    )}
+                  </Link>
+                ) : (
+                  <a
+                    href={`#${link.id}`}
+                    onClick={() => setActive(link.title)}
+                    className={`
+                      relative block py-2 text-[16px] font-medium
+                      transition-colors duration-200
+                      ${
+                        isActive
+                          ? "text-white"
+                          : "text-secondary hover:text-white"
+                      }
+                    `}
+                  >
+                    {link.title}
+
+                    {isActive && (
+                      <span className="absolute -bottom-1 left-1/2 h-0.5 w-5 -translate-x-1/2 rounded-full bg-primary" />
+                    )}
+                  </a>
+                )}
               </li>
-            ) : (
-              <li
-                key={link.id}
-                className={`${
-                  active === link.title ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
-                onClick={() => setActive(link.title)}
-              >
-                <a href={`#${link.id}`}>{link.title}</a>
-              </li>
-            )
-          )}
+            );
+          })}
 
           <li>
             <Resume />
           </li>
         </ul>
-        
-        <div className="md:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain aspect-square cursor-pointer"
-            onClick={() => {
-              setToggle(!toggle);
-            }}
-          />
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+
+        {/* Mobile Menu Button */}
+        <div className="flex items-center md:hidden">
+          <button
+            type="button"
+            aria-label={toggle ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={toggle}
+            onClick={() => setToggle((prev) => !prev)}
+            className="
+              flex h-10 w-10 items-center justify-center
+              rounded-lg
+              border border-white/[0.08]
+              bg-white/[0.03]
+              transition-all duration-200
+              hover:border-primary/40
+              hover:bg-primary/5
+            "
           >
-            <ul className="list-none flex justify-end items-start flex-col gap-4">
-              
-              {navLinks.map((link) =>
-                location !== "/" ? (
-                  <li>
-                    <Link
-                      to={`/`}
-                      key={link.id}
-                      className={`${
-                        active === link.title ? "text-white" : "text-secondary"
-                      } hover:text-white text-[18px] font-medium cursor-pointer`}
-                      onClick={() => setActive(link.title)}
-                    >
-                      <a href={`#${link.id}`}>{link.title}</a>
-                    </Link>
-                  </li>
-                ) : (
-                  <li
-                    key={link.id}
-                    className={`${
-                      active === link.title ? "text-white" : "text-secondary"
-                    } hover:text-white text-[18px] font-medium cursor-pointer`}
-                    onClick={() => setActive(link.title)}
-                  >
-                    <a href={`#${link.id}`}>{link.title}</a>
-                  </li>
-                )
-              )}
-              <li>
-                <Resume />
-              </li>
-            </ul>
-          </div>
+            <img
+              src={toggle ? close : menu}
+              alt=""
+              className="h-6 w-6 object-contain"
+            />
+          </button>
+
+          {/* Mobile Dropdown */}
+          {toggle && (
+            <div
+              className="
+                absolute right-4 top-[72px]
+                min-w-[190px]
+                rounded-2xl
+                border border-white/[0.08]
+                bg-bgColor/95
+                p-4
+                shadow-xl
+                backdrop-blur-xl
+              "
+            >
+              <ul className="flex flex-col gap-1">
+                {navLinks.map((link) => {
+                  const isActive = active === link.title;
+
+                  return (
+                    <li key={link.id}>
+                      {location !== "/" ? (
+                        <Link
+                          to={`/#${link.id}`}
+                          onClick={() => setActive(link.title)}
+                          className={`
+                            block rounded-lg px-3 py-2.5
+                            text-[16px] font-medium
+                            transition-colors duration-200
+                            ${
+                              isActive
+                                ? "bg-primary/10 text-white"
+                                : "text-secondary hover:bg-white/[0.04] hover:text-white"
+                            }
+                          `}
+                        >
+                          {link.title}
+                        </Link>
+                      ) : (
+                        <a
+                          href={`#${link.id}`}
+                          onClick={() => setActive(link.title)}
+                          className={`
+                            block rounded-lg px-3 py-2.5
+                            text-[16px] font-medium
+                            transition-colors duration-200
+                            ${
+                              isActive
+                                ? "bg-primary/10 text-white"
+                                : "text-secondary hover:bg-white/[0.04] hover:text-white"
+                            }
+                          `}
+                        >
+                          {link.title}
+                        </a>
+                      )}
+                    </li>
+                  );
+                })}
+
+                <li className="mt-2 border-t border-white/[0.08] pt-3">
+                  <Resume />
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </nav>
