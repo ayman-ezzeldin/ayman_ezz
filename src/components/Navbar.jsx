@@ -22,16 +22,12 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className={`${styles.paddingX} sticky top-0 z-50 w-full`}>
+    <nav className={`${styles.paddingX} sticky top-0  md:top-4 z-50 w-full`}>
       <div
         className="
           mx-auto flex w-full max-w-7xl items-center justify-between
-          rounded-2xl
-          border border-white/[0.08]
-          bg-bgColor/70
           px-4 py-2
-          backdrop-blur-xl
-          md:px-5
+          md:px-5,
         "
       >
         {/* Logo */}
