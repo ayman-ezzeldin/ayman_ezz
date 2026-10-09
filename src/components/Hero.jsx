@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative mx-auto h-[90svh] w-full overflow-hidden bg-transparent"
+      className="relative mx-auto h-[90svh] w-full overflow-hidden"
     >
       {/* Hero Content */}
       <div
@@ -34,7 +34,7 @@ const Hero = () => {
         </motion.div>
 
         {/* Main Content */}
-        <div className="pt-[120px]">
+        <div className="md:pt-[120px] pt-8">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -188,7 +188,7 @@ const Hero = () => {
           delay: 1.5,
           duration: 0.6,
         }}
-        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center justify-center xs:bottom-10"
+        className=" hidden absolute bottom-8 left-1/2 z-10 md:flex -translate-x-1/2 items-center justify-center xs:bottom-10"
       >
         <a
           href="#about"
